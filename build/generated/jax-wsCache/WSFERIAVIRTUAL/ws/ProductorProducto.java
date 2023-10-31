@@ -18,8 +18,10 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="calibre_idcalibre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="idcalibre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="img" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="nombre_productor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="nombreproducto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="precio" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="producto_idproducto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="productor_rut" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
@@ -35,8 +37,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "productorProducto", propOrder = {
     "calibreIdcalibre",
+    "idcalibre",
     "img",
     "nombreProductor",
+    "nombreproducto",
     "precio",
     "productoIdproducto",
     "productorRut",
@@ -46,9 +50,11 @@ public class ProductorProducto {
 
     @XmlElement(name = "calibre_idcalibre")
     protected String calibreIdcalibre;
+    protected String idcalibre;
     protected String img;
     @XmlElement(name = "nombre_productor")
     protected String nombreProductor;
+    protected String nombreproducto;
     protected int precio;
     @XmlElement(name = "producto_idproducto")
     protected String productoIdproducto;
@@ -78,6 +84,30 @@ public class ProductorProducto {
      */
     public void setCalibreIdcalibre(String value) {
         this.calibreIdcalibre = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad idcalibre.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIdcalibre() {
+        return idcalibre;
+    }
+
+    /**
+     * Define el valor de la propiedad idcalibre.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIdcalibre(String value) {
+        this.idcalibre = value;
     }
 
     /**
@@ -126,6 +156,30 @@ public class ProductorProducto {
      */
     public void setNombreProductor(String value) {
         this.nombreProductor = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad nombreproducto.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNombreproducto() {
+        return nombreproducto;
+    }
+
+    /**
+     * Define el valor de la propiedad nombreproducto.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNombreproducto(String value) {
+        this.nombreproducto = value;
     }
 
     /**

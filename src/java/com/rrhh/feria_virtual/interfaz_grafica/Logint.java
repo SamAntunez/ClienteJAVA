@@ -1,6 +1,10 @@
 
 package com.rrhh.feria_virtual.interfaz_grafica;
 
+import javax.swing.JTextField;
+import ws.Login;
+import ws.WSFERIAVIRTUAL;
+import ws.WebServiceFV;
 import Widget.TextPrompt;
 import javax.swing.JOptionPane;
 import Test.TestWS;
@@ -12,7 +16,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class Login extends javax.swing.JFrame {
+public class Logint extends javax.swing.JFrame {
+     private WebServiceFV servicioWeb;  
     
     private static final String URL = "jdbc:oracle:thin:@localhost:1521/orclpdb";
     private static final String USUARIO = "feria_virtual";
@@ -23,8 +28,12 @@ public class Login extends javax.swing.JFrame {
     private MainConsultor consultor;
 
    
-    public Login() {
+    public Logint() {
         initComponents();
+        
+        WSFERIAVIRTUAL servicio = new WSFERIAVIRTUAL();
+        servicioWeb = servicio.getWebServiceFVPort();  
+        
         TextPrompt prueba = new TextPrompt("Nombre de usuario", txtUsuario);
         TextPrompt prueba2 = new TextPrompt("Contraseña", txtContra);
         
@@ -150,57 +159,30 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-    String usuario = txtUsuario.getText();
-    String contrasena = new String(txtContra.getPassword());
+     System.out.println("Método btnIngresarActionPerformed ejecutado.");
+       try {
+        String nombreUsuario = txtUsuario.getText().trim();
+        String contrasena =txtContra.getPassword().toString();
 
-    try {
-     
-        Connection connection = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+        // Llama al método listarlogin2 del servicio web para autenticar al usuario
+        
+        Login usuario = servicioWeb.listarlogin2(nombreUsuario, contrasena);
+           System.out.println(usuario.getNombre());
+           System.out.println(usuario.getTipousuario());
 
-        // Consultar la base de datos para verificar las credenciales en la tabla ADMINISTRADOR
-        String consultaAdmin = "SELECT * FROM ADMINISTRADOR WHERE NOMBREUSUARIO = ? AND CONTRASENAUSUARIO = ?";
-        PreparedStatement preparedStatementAdmin = connection.prepareStatement(consultaAdmin);
-        preparedStatementAdmin.setString(1, usuario);
-        preparedStatementAdmin.setString(2, contrasena);
-        ResultSet resultSetAdmin = preparedStatementAdmin.executeQuery();
-
-        // Consultar la base de datos para verificar las credenciales en la tabla CONSULTOR
-        String consultaConsultor = "SELECT * FROM CONSULTOR WHERE NOMBREUSUARIO = ? AND CONTRASENAUSUARIO = ?";
-        PreparedStatement preparedStatementConsultor = connection.prepareStatement(consultaConsultor);
-        preparedStatementConsultor.setString(1, usuario);
-        preparedStatementConsultor.setString(2, contrasena);
-        ResultSet resultSetConsultor = preparedStatementConsultor.executeQuery();
-
-        // Verificar si las credenciales son válidas para ADMINISTRADOR
-        if (resultSetAdmin.next()) {
-            // Credenciales válidas para ADMINISTRADOR, abrir la ventana Principal
-            Principal principal = new Principal();
-            principal.setVisible(true);
-            principal.setLocationRelativeTo(null);
-            this.dispose(); // Cerrar la ventana de inicio de sesión
-        } else if (resultSetConsultor.next()) {
-            // Credenciales válidas para CONSULTOR, abrir la ventana MainConsultor
-            MainConsultor consultor = new MainConsultor();
-            consultor.setVisible(true);
-            consultor.setLocationRelativeTo(null);
-            this.dispose(); // Cerrar la ventana de inicio de sesión
+        if (usuario != null) {
+            // Redirige al usuario a la ventana Principal
+            Principal principalWindow = new Principal();
+            principalWindow.setVisible(true);
+            this.dispose(); // Cierra la ventana de login
         } else {
-            // Credenciales inválidas, mostrar un mensaje de error
-            JOptionPane.showMessageDialog(this, "Credenciales incorrectas", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
         }
-
-        // Cerrar la conexión y liberar recursos
-        resultSetAdmin.close();
-        preparedStatementAdmin.close();
-        resultSetConsultor.close();
-        preparedStatementConsultor.close();
-        connection.close();
-
-    } catch (SQLException ex) {
-        // Manejar errores de SQL
+    } catch (Exception ex) {
         ex.printStackTrace();
-        JOptionPane.showMessageDialog(this, "Error al conectar a la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
-        }                         
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
 
 
     }//GEN-LAST:event_btnIngresarActionPerformed
@@ -237,7 +219,7 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new Logint().setVisible(true);
             }
         });
     }

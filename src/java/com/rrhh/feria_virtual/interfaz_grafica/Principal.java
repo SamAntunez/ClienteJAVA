@@ -195,7 +195,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
-       Login pantalla = new Login();
+       Logint pantalla = new Logint();
 pantalla.setVisible(true);
 pantalla.setLocationRelativeTo(null);
 JOptionPane.showMessageDialog(null, "Su sesión se ha cerrado correctamente");

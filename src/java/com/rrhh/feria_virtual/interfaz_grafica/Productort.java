@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.rrhh.feria_virtual.interfaz_grafica;
+
 import ws.Productor;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
@@ -123,7 +124,7 @@ public class Productort extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Rut ", "DV", "Nombre", "Apellido P", "Apellido M", "Fecha nacimiento", "Direccion", "Correo", "Contraseña", "Comuna"
+                "Rut ", "DV", "Nombre", "Apellido P", "Apellido M", "Fecha nacimiento", "Direccion", "Correo", "Contraseña", "Ciudad"
             }
         ));
         jScrollPane2.setViewportView(tblProductor);
@@ -473,7 +474,7 @@ public class Productort extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void cargar_productores(){
-         // Llama al método del servicio web para obtener la lista de productores desde la base de datos
+    // Llama al método del servicio web para obtener la lista de productores desde la base de datos
      List<ws.Productor> productores = servicioWeb.listarProductor();
 
 
@@ -488,14 +489,14 @@ public class Productort extends javax.swing.JFrame {
         // Agrega los datos de los productores al modelo de datos de la tabla
         for (Productor productor : productores) {
             Object[] rowData = {productor.getRut(), productor.getDv(), productor.getNombre(), productor.getApellidopat(), productor.getApellidomat(), 
-                                productor.getFechanacimiento(), productor.getDireccion(), productor.getCorreoelectronico(), productor.getContrasena(), 
+                                productor.getDireccion(), productor.getFechanacimiento(), productor.getCorreoelectronico(), productor.getContrasena(), 
                                 productor.getComunaIdcomuna()};
             model.addRow(rowData);
         }
-    } else {
+      } else {
         // Si la lista de productores está vacía o hay un error al obtener los datos, muestra un mensaje de error
         JOptionPane.showMessageDialog(this, "Error al obtener datos de productores desde la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);}
-    }
+      }
        
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

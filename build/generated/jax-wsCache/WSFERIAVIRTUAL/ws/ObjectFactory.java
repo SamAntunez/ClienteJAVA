@@ -40,6 +40,8 @@ public class ObjectFactory {
     private final static QName _AgregarTransporteResponse_QNAME = new QName("http://ws/", "agregarTransporteResponse");
     private final static QName _AgregarTransportista_QNAME = new QName("http://ws/", "agregarTransportista");
     private final static QName _AgregarTransportistaResponse_QNAME = new QName("http://ws/", "agregarTransportistaResponse");
+    private final static QName _CrearNuevaOfertaEnSubasta_QNAME = new QName("http://ws/", "crearNuevaOfertaEnSubasta");
+    private final static QName _CrearNuevaOfertaEnSubastaResponse_QNAME = new QName("http://ws/", "crearNuevaOfertaEnSubastaResponse");
     private final static QName _CrearNuevoDetallePedidoo_QNAME = new QName("http://ws/", "crearNuevoDetallePedidoo");
     private final static QName _CrearNuevoDetallePedidooResponse_QNAME = new QName("http://ws/", "crearNuevoDetallePedidooResponse");
     private final static QName _CrearNuevoPedido_QNAME = new QName("http://ws/", "crearNuevoPedido");
@@ -80,14 +82,30 @@ public class ObjectFactory {
     private final static QName _ListarClienteNormalxRutResponse_QNAME = new QName("http://ws/", "listarClienteNormalxRutResponse");
     private final static QName _ListarClientes_QNAME = new QName("http://ws/", "listarClientes");
     private final static QName _ListarClientesResponse_QNAME = new QName("http://ws/", "listarClientesResponse");
+    private final static QName _ListarComuna_QNAME = new QName("http://ws/", "listarComuna");
+    private final static QName _ListarComunaResponse_QNAME = new QName("http://ws/", "listarComunaResponse");
     private final static QName _ListarConsultor_QNAME = new QName("http://ws/", "listarConsultor");
     private final static QName _ListarConsultorResponse_QNAME = new QName("http://ws/", "listarConsultorResponse");
+    private final static QName _ListarContratosCliEx_QNAME = new QName("http://ws/", "listarContratosCliEx");
+    private final static QName _ListarContratosCliExResponse_QNAME = new QName("http://ws/", "listarContratosCliExResponse");
+    private final static QName _ListarContratosTransporte_QNAME = new QName("http://ws/", "listarContratosTransporte");
+    private final static QName _ListarContratosTransporteResponse_QNAME = new QName("http://ws/", "listarContratosTransporteResponse");
+    private final static QName _ListarMarcas_QNAME = new QName("http://ws/", "listarMarcas");
+    private final static QName _ListarMarcasResponse_QNAME = new QName("http://ws/", "listarMarcasResponse");
+    private final static QName _ListarModelos_QNAME = new QName("http://ws/", "listarModelos");
+    private final static QName _ListarModelosResponse_QNAME = new QName("http://ws/", "listarModelosResponse");
+    private final static QName _ListarPais_QNAME = new QName("http://ws/", "listarPais");
+    private final static QName _ListarPaisResponse_QNAME = new QName("http://ws/", "listarPaisResponse");
     private final static QName _ListarProductor_QNAME = new QName("http://ws/", "listarProductor");
     private final static QName _ListarProductorResponse_QNAME = new QName("http://ws/", "listarProductorResponse");
     private final static QName _ListarProductos_QNAME = new QName("http://ws/", "listarProductos");
     private final static QName _ListarProductosResponse_QNAME = new QName("http://ws/", "listarProductosResponse");
     private final static QName _ListarProductosxIdyNombre_QNAME = new QName("http://ws/", "listarProductosxIdyNombre");
     private final static QName _ListarProductosxIdyNombreResponse_QNAME = new QName("http://ws/", "listarProductosxIdyNombreResponse");
+    private final static QName _ListarRegionesPorIDPais_QNAME = new QName("http://ws/", "listarRegionesPorIDPais");
+    private final static QName _ListarRegionesPorIDPaisResponse_QNAME = new QName("http://ws/", "listarRegionesPorIDPaisResponse");
+    private final static QName _ListarSubastas_QNAME = new QName("http://ws/", "listarSubastas");
+    private final static QName _ListarSubastasResponse_QNAME = new QName("http://ws/", "listarSubastasResponse");
     private final static QName _ListarTransportexRut_QNAME = new QName("http://ws/", "listarTransportexRut");
     private final static QName _ListarTransportexRutResponse_QNAME = new QName("http://ws/", "listarTransportexRutResponse");
     private final static QName _ListarTransportista_QNAME = new QName("http://ws/", "listarTransportista");
@@ -254,6 +272,22 @@ public class ObjectFactory {
      */
     public AgregarTransportistaResponse createAgregarTransportistaResponse() {
         return new AgregarTransportistaResponse();
+    }
+
+    /**
+     * Create an instance of {@link CrearNuevaOfertaEnSubasta }
+     * 
+     */
+    public CrearNuevaOfertaEnSubasta createCrearNuevaOfertaEnSubasta() {
+        return new CrearNuevaOfertaEnSubasta();
+    }
+
+    /**
+     * Create an instance of {@link CrearNuevaOfertaEnSubastaResponse }
+     * 
+     */
+    public CrearNuevaOfertaEnSubastaResponse createCrearNuevaOfertaEnSubastaResponse() {
+        return new CrearNuevaOfertaEnSubastaResponse();
     }
 
     /**
@@ -577,6 +611,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListarComuna }
+     * 
+     */
+    public ListarComuna createListarComuna() {
+        return new ListarComuna();
+    }
+
+    /**
+     * Create an instance of {@link ListarComunaResponse }
+     * 
+     */
+    public ListarComunaResponse createListarComunaResponse() {
+        return new ListarComunaResponse();
+    }
+
+    /**
      * Create an instance of {@link ListarConsultor }
      * 
      */
@@ -590,6 +640,86 @@ public class ObjectFactory {
      */
     public ListarConsultorResponse createListarConsultorResponse() {
         return new ListarConsultorResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarContratosCliEx }
+     * 
+     */
+    public ListarContratosCliEx createListarContratosCliEx() {
+        return new ListarContratosCliEx();
+    }
+
+    /**
+     * Create an instance of {@link ListarContratosCliExResponse }
+     * 
+     */
+    public ListarContratosCliExResponse createListarContratosCliExResponse() {
+        return new ListarContratosCliExResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarContratosTransporte }
+     * 
+     */
+    public ListarContratosTransporte createListarContratosTransporte() {
+        return new ListarContratosTransporte();
+    }
+
+    /**
+     * Create an instance of {@link ListarContratosTransporteResponse }
+     * 
+     */
+    public ListarContratosTransporteResponse createListarContratosTransporteResponse() {
+        return new ListarContratosTransporteResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarMarcas }
+     * 
+     */
+    public ListarMarcas createListarMarcas() {
+        return new ListarMarcas();
+    }
+
+    /**
+     * Create an instance of {@link ListarMarcasResponse }
+     * 
+     */
+    public ListarMarcasResponse createListarMarcasResponse() {
+        return new ListarMarcasResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarModelos }
+     * 
+     */
+    public ListarModelos createListarModelos() {
+        return new ListarModelos();
+    }
+
+    /**
+     * Create an instance of {@link ListarModelosResponse }
+     * 
+     */
+    public ListarModelosResponse createListarModelosResponse() {
+        return new ListarModelosResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarPais }
+     * 
+     */
+    public ListarPais createListarPais() {
+        return new ListarPais();
+    }
+
+    /**
+     * Create an instance of {@link ListarPaisResponse }
+     * 
+     */
+    public ListarPaisResponse createListarPaisResponse() {
+        return new ListarPaisResponse();
     }
 
     /**
@@ -638,6 +768,38 @@ public class ObjectFactory {
      */
     public ListarProductosxIdyNombreResponse createListarProductosxIdyNombreResponse() {
         return new ListarProductosxIdyNombreResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarRegionesPorIDPais }
+     * 
+     */
+    public ListarRegionesPorIDPais createListarRegionesPorIDPais() {
+        return new ListarRegionesPorIDPais();
+    }
+
+    /**
+     * Create an instance of {@link ListarRegionesPorIDPaisResponse }
+     * 
+     */
+    public ListarRegionesPorIDPaisResponse createListarRegionesPorIDPaisResponse() {
+        return new ListarRegionesPorIDPaisResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarSubastas }
+     * 
+     */
+    public ListarSubastas createListarSubastas() {
+        return new ListarSubastas();
+    }
+
+    /**
+     * Create an instance of {@link ListarSubastasResponse }
+     * 
+     */
+    public ListarSubastasResponse createListarSubastasResponse() {
+        return new ListarSubastasResponse();
     }
 
     /**
@@ -905,14 +1067,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Calibre }
-     * 
-     */
-    public Calibre createCalibre() {
-        return new Calibre();
-    }
-
-    /**
      * Create an instance of {@link Cliente }
      * 
      */
@@ -921,19 +1075,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Login }
+     * Create an instance of {@link ContratoClienteExterno }
      * 
      */
-    public Login createLogin() {
-        return new Login();
-    }
-
-    /**
-     * Create an instance of {@link Consultor }
-     * 
-     */
-    public Consultor createConsultor() {
-        return new Consultor();
+    public ContratoClienteExterno createContratoClienteExterno() {
+        return new ContratoClienteExterno();
     }
 
     /**
@@ -969,11 +1115,91 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Pais }
+     * 
+     */
+    public Pais createPais() {
+        return new Pais();
+    }
+
+    /**
      * Create an instance of {@link Transportista }
      * 
      */
     public Transportista createTransportista() {
         return new Transportista();
+    }
+
+    /**
+     * Create an instance of {@link Consultor }
+     * 
+     */
+    public Consultor createConsultor() {
+        return new Consultor();
+    }
+
+    /**
+     * Create an instance of {@link Modelo }
+     * 
+     */
+    public Modelo createModelo() {
+        return new Modelo();
+    }
+
+    /**
+     * Create an instance of {@link Calibre }
+     * 
+     */
+    public Calibre createCalibre() {
+        return new Calibre();
+    }
+
+    /**
+     * Create an instance of {@link Comuna }
+     * 
+     */
+    public Comuna createComuna() {
+        return new Comuna();
+    }
+
+    /**
+     * Create an instance of {@link Login }
+     * 
+     */
+    public Login createLogin() {
+        return new Login();
+    }
+
+    /**
+     * Create an instance of {@link ContratoTransporte }
+     * 
+     */
+    public ContratoTransporte createContratoTransporte() {
+        return new ContratoTransporte();
+    }
+
+    /**
+     * Create an instance of {@link Marca }
+     * 
+     */
+    public Marca createMarca() {
+        return new Marca();
+    }
+
+    /**
+     * Create an instance of {@link Subasta }
+     * 
+     */
+    public Subasta createSubasta() {
+        return new Subasta();
+    }
+
+    /**
+     * Create an instance of {@link Region }
+     * 
+     */
+    public Region createRegion() {
+        return new Region();
     }
 
     /**
@@ -1182,6 +1408,32 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws/", name = "agregarTransportistaResponse")
     public JAXBElement<AgregarTransportistaResponse> createAgregarTransportistaResponse(AgregarTransportistaResponse value) {
         return new JAXBElement<AgregarTransportistaResponse>(_AgregarTransportistaResponse_QNAME, AgregarTransportistaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CrearNuevaOfertaEnSubasta }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link CrearNuevaOfertaEnSubasta }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "crearNuevaOfertaEnSubasta")
+    public JAXBElement<CrearNuevaOfertaEnSubasta> createCrearNuevaOfertaEnSubasta(CrearNuevaOfertaEnSubasta value) {
+        return new JAXBElement<CrearNuevaOfertaEnSubasta>(_CrearNuevaOfertaEnSubasta_QNAME, CrearNuevaOfertaEnSubasta.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CrearNuevaOfertaEnSubastaResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link CrearNuevaOfertaEnSubastaResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "crearNuevaOfertaEnSubastaResponse")
+    public JAXBElement<CrearNuevaOfertaEnSubastaResponse> createCrearNuevaOfertaEnSubastaResponse(CrearNuevaOfertaEnSubastaResponse value) {
+        return new JAXBElement<CrearNuevaOfertaEnSubastaResponse>(_CrearNuevaOfertaEnSubastaResponse_QNAME, CrearNuevaOfertaEnSubastaResponse.class, null, value);
     }
 
     /**
@@ -1705,6 +1957,32 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarComuna }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarComuna }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarComuna")
+    public JAXBElement<ListarComuna> createListarComuna(ListarComuna value) {
+        return new JAXBElement<ListarComuna>(_ListarComuna_QNAME, ListarComuna.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarComunaResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarComunaResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarComunaResponse")
+    public JAXBElement<ListarComunaResponse> createListarComunaResponse(ListarComunaResponse value) {
+        return new JAXBElement<ListarComunaResponse>(_ListarComunaResponse_QNAME, ListarComunaResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ListarConsultor }{@code >}
      * 
      * @param value
@@ -1728,6 +2006,136 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws/", name = "listarConsultorResponse")
     public JAXBElement<ListarConsultorResponse> createListarConsultorResponse(ListarConsultorResponse value) {
         return new JAXBElement<ListarConsultorResponse>(_ListarConsultorResponse_QNAME, ListarConsultorResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarContratosCliEx }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarContratosCliEx }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarContratosCliEx")
+    public JAXBElement<ListarContratosCliEx> createListarContratosCliEx(ListarContratosCliEx value) {
+        return new JAXBElement<ListarContratosCliEx>(_ListarContratosCliEx_QNAME, ListarContratosCliEx.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarContratosCliExResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarContratosCliExResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarContratosCliExResponse")
+    public JAXBElement<ListarContratosCliExResponse> createListarContratosCliExResponse(ListarContratosCliExResponse value) {
+        return new JAXBElement<ListarContratosCliExResponse>(_ListarContratosCliExResponse_QNAME, ListarContratosCliExResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarContratosTransporte }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarContratosTransporte }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarContratosTransporte")
+    public JAXBElement<ListarContratosTransporte> createListarContratosTransporte(ListarContratosTransporte value) {
+        return new JAXBElement<ListarContratosTransporte>(_ListarContratosTransporte_QNAME, ListarContratosTransporte.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarContratosTransporteResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarContratosTransporteResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarContratosTransporteResponse")
+    public JAXBElement<ListarContratosTransporteResponse> createListarContratosTransporteResponse(ListarContratosTransporteResponse value) {
+        return new JAXBElement<ListarContratosTransporteResponse>(_ListarContratosTransporteResponse_QNAME, ListarContratosTransporteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarMarcas }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarMarcas }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarMarcas")
+    public JAXBElement<ListarMarcas> createListarMarcas(ListarMarcas value) {
+        return new JAXBElement<ListarMarcas>(_ListarMarcas_QNAME, ListarMarcas.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarMarcasResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarMarcasResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarMarcasResponse")
+    public JAXBElement<ListarMarcasResponse> createListarMarcasResponse(ListarMarcasResponse value) {
+        return new JAXBElement<ListarMarcasResponse>(_ListarMarcasResponse_QNAME, ListarMarcasResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarModelos }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarModelos }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarModelos")
+    public JAXBElement<ListarModelos> createListarModelos(ListarModelos value) {
+        return new JAXBElement<ListarModelos>(_ListarModelos_QNAME, ListarModelos.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarModelosResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarModelosResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarModelosResponse")
+    public JAXBElement<ListarModelosResponse> createListarModelosResponse(ListarModelosResponse value) {
+        return new JAXBElement<ListarModelosResponse>(_ListarModelosResponse_QNAME, ListarModelosResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPais }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarPais }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarPais")
+    public JAXBElement<ListarPais> createListarPais(ListarPais value) {
+        return new JAXBElement<ListarPais>(_ListarPais_QNAME, ListarPais.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPaisResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarPaisResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarPaisResponse")
+    public JAXBElement<ListarPaisResponse> createListarPaisResponse(ListarPaisResponse value) {
+        return new JAXBElement<ListarPaisResponse>(_ListarPaisResponse_QNAME, ListarPaisResponse.class, null, value);
     }
 
     /**
@@ -1806,6 +2214,58 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws/", name = "listarProductosxIdyNombreResponse")
     public JAXBElement<ListarProductosxIdyNombreResponse> createListarProductosxIdyNombreResponse(ListarProductosxIdyNombreResponse value) {
         return new JAXBElement<ListarProductosxIdyNombreResponse>(_ListarProductosxIdyNombreResponse_QNAME, ListarProductosxIdyNombreResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarRegionesPorIDPais }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarRegionesPorIDPais }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarRegionesPorIDPais")
+    public JAXBElement<ListarRegionesPorIDPais> createListarRegionesPorIDPais(ListarRegionesPorIDPais value) {
+        return new JAXBElement<ListarRegionesPorIDPais>(_ListarRegionesPorIDPais_QNAME, ListarRegionesPorIDPais.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarRegionesPorIDPaisResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarRegionesPorIDPaisResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarRegionesPorIDPaisResponse")
+    public JAXBElement<ListarRegionesPorIDPaisResponse> createListarRegionesPorIDPaisResponse(ListarRegionesPorIDPaisResponse value) {
+        return new JAXBElement<ListarRegionesPorIDPaisResponse>(_ListarRegionesPorIDPaisResponse_QNAME, ListarRegionesPorIDPaisResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarSubastas }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarSubastas }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarSubastas")
+    public JAXBElement<ListarSubastas> createListarSubastas(ListarSubastas value) {
+        return new JAXBElement<ListarSubastas>(_ListarSubastas_QNAME, ListarSubastas.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarSubastasResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListarSubastasResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws/", name = "listarSubastasResponse")
+    public JAXBElement<ListarSubastasResponse> createListarSubastasResponse(ListarSubastasResponse value) {
+        return new JAXBElement<ListarSubastasResponse>(_ListarSubastasResponse_QNAME, ListarSubastasResponse.class, null, value);
     }
 
     /**

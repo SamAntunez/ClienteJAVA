@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="rutabuscar" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -27,26 +27,26 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "listarTransportexRut", propOrder = {
-    "rutabuscar"
+    "arg0"
 })
 public class ListarTransportexRut {
 
-    protected int rutabuscar;
+    protected int arg0;
 
     /**
-     * Obtiene el valor de la propiedad rutabuscar.
+     * Obtiene el valor de la propiedad arg0.
      * 
      */
-    public int getRutabuscar() {
-        return rutabuscar;
+    public int getArg0() {
+        return arg0;
     }
 
     /**
-     * Define el valor de la propiedad rutabuscar.
+     * Define el valor de la propiedad arg0.
      * 
      */
-    public void setRutabuscar(int value) {
-        this.rutabuscar = value;
+    public void setArg0(int value) {
+        this.arg0 = value;
     }
 
 }

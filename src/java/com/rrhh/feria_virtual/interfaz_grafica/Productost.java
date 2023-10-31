@@ -1,9 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 package com.rrhh.feria_virtual.interfaz_grafica;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.swing.DefaultComboBoxModel;
 import java.sql.SQLException;
 import ws.Calibre;
 import javax.swing.JOptionPane;
@@ -20,17 +20,19 @@ import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import ws.ListarCalibre;
 import javax.swing.JComboBox;
+import ws.ListarProductosxIdyNombre;
+import ws.Producto;
 
 
 public class Productost extends javax.swing.JFrame {
     
     private WebServiceFV servicioWeb;
-    private HashMap<String, String> productosMap;
     private String rut;
     private String nombre;
     private String apellidop;
 
     public Productost(String rut, String nombre) {
+        
         initComponents();
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         DefaultTableModel model = (DefaultTableModel) tblProductosProductor.getModel();
@@ -39,70 +41,21 @@ public class Productost extends javax.swing.JFrame {
         
         WSFERIAVIRTUAL servicio = new WSFERIAVIRTUAL();
         servicioWeb = servicio.getWebServiceFVPort(); 
-        
-        
-        
-        
-      
-        productosMap = new HashMap<>();
-        productosMap.put("Arándano", "prod_001");
-        productosMap.put("Frambuesa", "prod_002");
-        productosMap.put("Fresa", "prod_003");
-        productosMap.put("Grosella espinosa", "prod_004");
-        productosMap.put("Grosella negra", "prod_005");
-        productosMap.put("Grosella roja", "prod_006");
-        productosMap.put("Zarzamora", "prod_007");
-        productosMap.put("Limón", "prod_008");
-        productosMap.put("Mandarina", "prod_009");
-        productosMap.put("Naranja", "prod_010");
-        productosMap.put("Pomelo", "prod_011");
-        productosMap.put("Melón", "prod_012");
-        productosMap.put("Sandía", "prod_013");
-        productosMap.put("Aguacate", "prod_014");
-        productosMap.put("Carambola", "prod_015");
-        productosMap.put("Chirimoya", "prod_016");
-        productosMap.put("Coco", "prod_017");
-        productosMap.put("Dátil", "prod_018");
-        productosMap.put("Fruta de la pasión", "prod_019");
-        productosMap.put("Kiwi", "prod_020");
-        productosMap.put("Litchi", "prod_021");
-        productosMap.put("Mango", "prod_022");
-        productosMap.put("Papaya", "prod_023");
-        productosMap.put("Piña", "prod_024");
-        productosMap.put("Plátano", "prod_025");
-        productosMap.put("Albaricoque", "prod_026");
-        productosMap.put("Cereza", "prod_027");
-        productosMap.put("Higo", "prod_029");
-        productosMap.put("Kaki", "prod_030");
-        productosMap.put("Manzana roja", "prod_031");
-        productosMap.put("Manzana verde", "prod_032");
-        productosMap.put("Melocotón", "prod_033");
-        productosMap.put("Nectarina", "prod_034");
-        productosMap.put("Níspero", "prod_035");
-        productosMap.put("Pera", "prod_036");
-        productosMap.put("Uva", "prod_037");
-        productosMap.put("Almendra", "prod_038");
-        productosMap.put("Avellana", "prod_039");
-        productosMap.put("Cacahuete", "prod_040");
-        productosMap.put("Castaña", "prod_041");
-        productosMap.put("Nuez", "prod_042");
-        productosMap.put("NuezPecan", "prod_043");
-        productosMap.put("Pistacho", "prod_044");
+
         this.rut = rut;
         this.nombre = nombre;
-  
         
         // Lógica para mostrar el rut y el nombre en txtAreaProductor
         txtAreaProductor.setText("RUT: " + rut + "\nNombre: " + nombre );
-         txtAreaProductor.setEditable(false);
-         int rutProductor = Integer.parseInt(rut); // Convierte el rut a entero
-    
-
-    
+        txtAreaProductor.setEditable(false);
+        int rutProductor = Integer.parseInt(rut); // Convierte el rut a entero
+        // Llama a cmbProductoActionPerformed para cargar los productos al inicio
+        cmbProductoActionPerformed(null);
+        cmbCalibreActionPerformed(null);
+        cmbProducto.removeAllItems();
+        
+        cmbCalibre.removeAllItems();
     }
-     
-   
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -123,13 +76,13 @@ public class Productost extends javax.swing.JFrame {
         txtPrecio = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblProductosProductor = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        cmbCalibre = new javax.swing.JComboBox<>();
+        btnVolver = new javax.swing.JButton();
         cmbProducto = new javax.swing.JComboBox<>();
         txtImg = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         btnActualizar = new javax.swing.JButton();
         txtRut = new javax.swing.JTextField();
+        cmbCalibre = new javax.swing.JComboBox<>();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -160,6 +113,12 @@ public class Productost extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtAreaProductor);
 
         jLabel7.setText("Producto");
+
+        txtStock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStockActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Precio ");
 
@@ -195,21 +154,13 @@ public class Productost extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tblProductosProductor);
 
-        jButton2.setText("Volver");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnVolverActionPerformed(evt);
             }
         });
 
-        cmbCalibre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
-        cmbCalibre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbCalibreActionPerformed(evt);
-            }
-        });
-
-        cmbProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arándano", "Frambuesa", "Fresa", "Grosella espinosa", "Grosella negra", "Grosella roja", "Zarzamora", "Limón", "Mandarina", "Naranja", "Pomelo", "Melón", "Sandía", "Aguacate", "Carambola", "Chirimoya", "Coco", "Dátil", "Fruta de la pasión", "Kiwi", "Litchi", "Mango", "Papaya", "Piña", "Plátano", "Albaricoque", "Cereza", "Higo", "Kaki", "Manzana roja", "Manzana verde", "Melocotón", "Nectarina", "Níspero", "Pera", "Uva", "Almendra", "Avellana", "Cacahuete", "Castaña", "Nuez", "NuezPecan", "Pistacho" }));
         cmbProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbProductoActionPerformed(evt);
@@ -222,6 +173,12 @@ public class Productost extends javax.swing.JFrame {
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
+            }
+        });
+
+        cmbCalibre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbCalibreActionPerformed(evt);
             }
         });
 
@@ -242,18 +199,20 @@ public class Productost extends javax.swing.JFrame {
                             .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtImg, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtStock, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtPrecio, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1)
-                            .addComponent(cmbCalibre, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cmbProducto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAgregarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)))
+                            .addComponent(btnAgregarProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(txtImg, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(cmbCalibre, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(117, 117, 117)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(87, 87, 87)
                                 .addComponent(jLabel2)))
@@ -297,17 +256,14 @@ public class Productost extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(9, 9, 9)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(cmbProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel8)))
+                            .addComponent(cmbProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
@@ -315,7 +271,7 @@ public class Productost extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addComponent(btnAgregarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(63, 63, 63))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -338,109 +294,88 @@ public class Productost extends javax.swing.JFrame {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {
      this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 }
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         Productort pantalla = new Productort();
         pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(null);
         
        dispose(); 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     private void cmbProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbProductoActionPerformed
-        // TODO add your handling code here:
+    System.out.println("cmbProductoActionPerformed se está ejecutando"); // Mensaje de depuración
+    try {
+        // Llamar al método para obtener la lista de productos basados en el ID del calibre seleccionado
+        List<Producto> listaProductos = servicioWeb.listarProductosxIdyNombre();
+        // Limpiar el combo box de productos antes de agregar nuevos elementos
+        // Agregar los datos al combo box de productos (solo la primera columna)
+        for (Producto producto : listaProductos) {
+            cmbProducto.addItem(producto.getIdproducto());
+        }
+     } catch (Exception ex) {
+        // Manejar la excepción aquí
+        JOptionPane.showMessageDialog(null, "Error al cargar los productos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        ex.printStackTrace(); // o muestra un mensaje de error en lugar de imprimir la traza
+        }
     }//GEN-LAST:event_cmbProductoActionPerformed
 
     private void btnAgregarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoActionPerformed
-    String precioString = txtPrecio.getText();
-    String stockString = txtStock.getText();
-    String img = txtImg.getText(); // Obtiene la URL de la imagen desde el campo de texto txtImg
+     try {
+        // Obtener los valores seleccionados de los combo boxes
+        String calibre_idcalibre = cmbCalibre.getSelectedItem().toString();
+        String producto_idproducto = cmbProducto.getSelectedItem().toString();
+        int precio = Integer.parseInt(txtPrecio.getText()); // Obtener el valor del precio desde el campo de texto
+        int stock = Integer.parseInt(txtStock.getText()); // Obtener el valor del stock desde el campo de texto
+        int productor_rut = Integer.parseInt(rut); // Usar el valor predefinido del RUT
+        String img = txtImg.getText(); // Obtener el valor de la imagen desde el campo de texto
 
-    // Obtiene el nombre del calibre seleccionado en el JComboBox
-    String calibreNombre = cmbCalibre.getSelectedItem().toString();
+        // Llamar al método para agregar un nuevo producto
+        boolean resultado = servicioWeb.agregarNuevoProducto(precio, stock, calibre_idcalibre, producto_idproducto, productor_rut, img);
 
-    // Obtiene el nombre del producto seleccionado en el JComboBox
-    String productoNombre = cmbProducto.getSelectedItem().toString();
-
-    // Verifica si los campos obligatorios están llenos
-    if (precioString.isEmpty() || stockString.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Por favor, llena todos los campos obligatorios antes de intentar agregar el producto.", "Error", JOptionPane.ERROR_MESSAGE);
-    } else {
-        try {
-            // Convierte el precio y el stock a enteros
-            int precio = Integer.parseInt(precioString);
-            int stock = Integer.parseInt(stockString);
-
-            // Llama a una función para obtener el ID del calibre basado en su nombre
-            int calibreId = obtenerIdCalibrePorNombre(calibreNombre);
-
-            // Llama a una función para obtener el ID del producto basado en su nombre
-            String productoId = obtenerIdProductoPorNombre(productoNombre);
-
-            // Llama a la función para agregar un nuevo producto
-            boolean registrado = servicioWeb.agregarNuevoProducto(precio, stock, String.valueOf(calibreId), productoId, Integer.parseInt(rut), img);
-
-            if (registrado) {
-                // El producto se registró correctamente
-                JOptionPane.showMessageDialog(this, "Producto registrado correctamente.");
-                // Puedes limpiar los campos después de registrar el producto si lo deseas
-            } else {
-                // Hubo un error al registrar el producto
-                JOptionPane.showMessageDialog(this, "Error al registrar el producto. Inténtalo de nuevo.");
-            }
-        } catch (NumberFormatException e) {
-            // Si el precio o el stock no son números válidos, muestra un mensaje de error
-            JOptionPane.showMessageDialog(this, "El precio y el stock deben ser números válidos.", "Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace(); // Imprime la traza del error para depuración
+        // Verificar el resultado y realizar acciones apropiadas
+        if (resultado) {
+            // El producto se agregó correctamente, puedes mostrar un mensaje de éxito o realizar alguna otra acción
+            JOptionPane.showMessageDialog(this, "Producto agregado correctamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            // Hubo un problema al agregar el producto, muestra un mensaje de error o realiza acciones apropiadas
+            JOptionPane.showMessageDialog(this, "Error al agregar el producto", "Error", JOptionPane.ERROR_MESSAGE);
         }
+    } catch (NumberFormatException ex) {
+        // Manejar la excepción si los valores ingresados no son números válidos
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese números válidos para Precio, Stock y RUT", "Error", JOptionPane.ERROR_MESSAGE);
+    } catch (Exception ex) {
+        // Manejar otras excepciones aquí
+        ex.printStackTrace(); // o muestra un mensaje de error en lugar de imprimir la traza
     }
-}
-
-// Función para obtener el ID del calibre basado en su nombre
-private int obtenerIdCalibrePorNombre(String calibreNombre) {
-    // Aquí puedes implementar la lógica para obtener el ID del calibre basado en su nombre
-    // Retorna el ID correspondiente al nombre del calibre
-    return 0; // Cambia esto con la lógica real para obtener el ID del calibre
-}
-
-// Función para obtener el ID del producto basado en su nombre
-private String obtenerIdProductoPorNombre(String productoNombre) {
-    // Aquí puedes implementar la lógica para obtener el ID del producto basado en su nombre
-    // Retorna el ID correspondiente al nombre del producto
-    return "0"; // Cambia esto con la lógica real para obtener el ID del producto
-
     }//GEN-LAST:event_btnAgregarProductoActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
 
     }//GEN-LAST:event_btnActualizarActionPerformed
 
+    private void txtStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStockActionPerformed
+
     private void cmbCalibreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCalibreActionPerformed
-  try {
-        // Obtener la lista de calibres del servicio web
-        List<Calibre> calibres = servicioWeb.listarCalibre();
-
-        // Limpiar el ComboBox antes de agregar nuevos elementos
-        cmbCalibre.removeAllItems();
-
-        // Verificar si la lista de calibres no está vacía
-        if (calibres != null && !calibres.isEmpty()) {
-            // Agregar los nombres de los calibres (primera columna) al ComboBox
-            for (Calibre calibre : calibres) {
-                // Obtener el valor de la primera columna y agregarlo al ComboBox
-                String nombrePrimeraColumna = calibre.getIdcalibre(); // Reemplaza esto con el método real para obtener el valor de la primera columna
-                cmbCalibre.addItem(nombrePrimeraColumna);
-            }
-        } else {
-            // No hacer nada si la lista de calibres está vacía
+   System.out.println("cmbProductoActionPerformed se está ejecutando"); // Mensaje de depuración
+   
+    try {
+        // Llamar al método para obtener la lista de productos basados en el ID del calibre seleccionado
+        List<Calibre> listaCalibres = servicioWeb.listarCalibre();
+        
+        // Limpiar el combo box de productos antes de agregar nuevos elementos
+        
+        
+        // Agregar los datos al combo box de productos (solo la primera columna)
+        for (Calibre calibre : listaCalibres) {
+            cmbCalibre.addItem(calibre.getIdcalibre());
         }
     } catch (Exception ex) {
-        // Manejar cualquier excepción que pueda ocurrir durante la obtención de datos
-        ex.printStackTrace(); // Imprimir el rastreo de la pila en la consola para depuración
+        // Manejar la excepción aquí
+        JOptionPane.showMessageDialog(null, "Error al cargar los productos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        ex.printStackTrace(); // o muestra un mensaje de error en lugar de imprimir la traza
     }
-
-    
-
-    
     }//GEN-LAST:event_cmbCalibreActionPerformed
     
    
@@ -479,9 +414,9 @@ private String obtenerIdProductoPorNombre(String productoNombre) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnAgregarProducto;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JComboBox<String> cmbCalibre;
     private javax.swing.JComboBox<String> cmbProducto;
-    private javax.swing.JButton jButton2;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

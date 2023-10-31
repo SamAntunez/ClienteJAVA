@@ -74,20 +74,23 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtImg" min="-2" pref="46" max="-2" attributes="0"/>
                               <Component id="txtStock" alignment="1" max="32767" attributes="0"/>
                               <Component id="txtPrecio" alignment="1" max="32767" attributes="0"/>
                               <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cmbCalibre" alignment="0" max="32767" attributes="0"/>
                               <Component id="cmbProducto" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnAgregarProducto" alignment="0" pref="293" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="txtImg" min="-2" pref="46" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="cmbCalibre" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                                  <Component id="jButton2" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="btnVolver" min="-2" pref="75" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
@@ -147,20 +150,15 @@
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtStock" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="cmbProducto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="txtPrecio" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -170,7 +168,7 @@
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="btnAgregarProducto" min="-2" pref="35" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnVolver" min="-2" pref="33" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -230,6 +228,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtStock">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStockActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
@@ -316,82 +317,18 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnVolver">
           <Properties>
             <Property name="text" type="java.lang.String" value="Volver"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolverActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="cmbCalibre">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
-                <StringItem index="0" value="1"/>
-                <StringItem index="1" value="2"/>
-                <StringItem index="2" value="3"/>
-                <StringItem index="3" value="4"/>
-                <StringItem index="4" value="5"/>
-                <StringItem index="5" value="6"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbCalibreActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
         </Component>
         <Component class="javax.swing.JComboBox" name="cmbProducto">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="43">
-                <StringItem index="0" value="Ar&#xe1;ndano"/>
-                <StringItem index="1" value="Frambuesa"/>
-                <StringItem index="2" value="Fresa"/>
-                <StringItem index="3" value="Grosella espinosa"/>
-                <StringItem index="4" value="Grosella negra"/>
-                <StringItem index="5" value="Grosella roja"/>
-                <StringItem index="6" value="Zarzamora"/>
-                <StringItem index="7" value="Lim&#xf3;n"/>
-                <StringItem index="8" value="Mandarina"/>
-                <StringItem index="9" value="Naranja"/>
-                <StringItem index="10" value="Pomelo"/>
-                <StringItem index="11" value="Mel&#xf3;n"/>
-                <StringItem index="12" value="Sand&#xed;a"/>
-                <StringItem index="13" value="Aguacate"/>
-                <StringItem index="14" value="Carambola"/>
-                <StringItem index="15" value="Chirimoya"/>
-                <StringItem index="16" value="Coco"/>
-                <StringItem index="17" value="D&#xe1;til"/>
-                <StringItem index="18" value="Fruta de la pasi&#xf3;n"/>
-                <StringItem index="19" value="Kiwi"/>
-                <StringItem index="20" value="Litchi"/>
-                <StringItem index="21" value="Mango"/>
-                <StringItem index="22" value="Papaya"/>
-                <StringItem index="23" value="Pi&#xf1;a"/>
-                <StringItem index="24" value="Pl&#xe1;tano"/>
-                <StringItem index="25" value="Albaricoque"/>
-                <StringItem index="26" value="Cereza"/>
-                <StringItem index="27" value="Higo"/>
-                <StringItem index="28" value="Kaki"/>
-                <StringItem index="29" value="Manzana roja"/>
-                <StringItem index="30" value="Manzana verde"/>
-                <StringItem index="31" value="Melocot&#xf3;n"/>
-                <StringItem index="32" value="Nectarina"/>
-                <StringItem index="33" value="N&#xed;spero"/>
-                <StringItem index="34" value="Pera"/>
-                <StringItem index="35" value="Uva"/>
-                <StringItem index="36" value="Almendra"/>
-                <StringItem index="37" value="Avellana"/>
-                <StringItem index="38" value="Cacahuete"/>
-                <StringItem index="39" value="Casta&#xf1;a"/>
-                <StringItem index="40" value="Nuez"/>
-                <StringItem index="41" value="NuezPecan"/>
-                <StringItem index="42" value="Pistacho"/>
-              </StringArray>
+              <StringArray count="0"/>
             </Property>
           </Properties>
           <Events>
@@ -417,6 +354,19 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtRut">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cmbCalibre">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbCalibreActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

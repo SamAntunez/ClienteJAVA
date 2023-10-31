@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="correoelectronicoingreso" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="nombreusuario" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="contrasena" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -28,36 +28,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "listarlogin2", propOrder = {
-    "correoelectronicoingreso",
+    "nombreusuario",
     "contrasena"
 })
 public class Listarlogin2 {
 
-    protected String correoelectronicoingreso;
+    protected String nombreusuario;
     protected String contrasena;
 
     /**
-     * Obtiene el valor de la propiedad correoelectronicoingreso.
+     * Obtiene el valor de la propiedad nombreusuario.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCorreoelectronicoingreso() {
-        return correoelectronicoingreso;
+    public String getNombreusuario() {
+        return nombreusuario;
     }
 
     /**
-     * Define el valor de la propiedad correoelectronicoingreso.
+     * Define el valor de la propiedad nombreusuario.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setCorreoelectronicoingreso(String value) {
-        this.correoelectronicoingreso = value;
+    public void setNombreusuario(String value) {
+        this.nombreusuario = value;
     }
 
     /**

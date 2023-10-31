@@ -27,387 +27,21 @@ public interface WebServiceFV {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<ws.Calibre>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarCalibre", targetNamespace = "http://ws/", className = "ws.ListarCalibre")
-    @ResponseWrapper(localName = "listarCalibreResponse", targetNamespace = "http://ws/", className = "ws.ListarCalibreResponse")
-    @Action(input = "http://ws/WebServiceFV/listarCalibreRequest", output = "http://ws/WebServiceFV/listarCalibreResponse")
-    public List<Calibre> listarCalibre();
-
-    /**
-     * 
-     * @param identificadorabuscar
-     * @return
-     *     returns ws.Cliente
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarClienteEmpresaxidentificador", targetNamespace = "http://ws/", className = "ws.ListarClienteEmpresaxidentificador")
-    @ResponseWrapper(localName = "listarClienteEmpresaxidentificadorResponse", targetNamespace = "http://ws/", className = "ws.ListarClienteEmpresaxidentificadorResponse")
-    @Action(input = "http://ws/WebServiceFV/listarClienteEmpresaxidentificadorRequest", output = "http://ws/WebServiceFV/listarClienteEmpresaxidentificadorResponse")
-    public Cliente listarClienteEmpresaxidentificador(
-        @WebParam(name = "identificadorabuscar", targetNamespace = "")
-        String identificadorabuscar);
-
-    /**
-     * 
-     * @param precio
-     * @param img
-     * @param rutabuscar
-     * @param stock
-     * @param calibreIdcalibre
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarProductosporRutProductor", targetNamespace = "http://ws/", className = "ws.ModificarProductosporRutProductor")
-    @ResponseWrapper(localName = "modificarProductosporRutProductorResponse", targetNamespace = "http://ws/", className = "ws.ModificarProductosporRutProductorResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarProductosporRutProductorRequest", output = "http://ws/WebServiceFV/modificarProductosporRutProductorResponse")
-    public boolean modificarProductosporRutProductor(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar,
-        @WebParam(name = "precio", targetNamespace = "")
-        int precio,
-        @WebParam(name = "stock", targetNamespace = "")
-        int stock,
-        @WebParam(name = "calibre_idcalibre", targetNamespace = "")
-        String calibreIdcalibre,
-        @WebParam(name = "img", targetNamespace = "")
-        String img);
-
-    /**
-     * 
-     * @param nombreusuarioabuscar
-     * @param contrasenausuario
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarAdministrador", targetNamespace = "http://ws/", className = "ws.ModificarAdministrador")
-    @ResponseWrapper(localName = "modificarAdministradorResponse", targetNamespace = "http://ws/", className = "ws.ModificarAdministradorResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarAdministradorRequest", output = "http://ws/WebServiceFV/modificarAdministradorResponse")
-    public boolean modificarAdministrador(
-        @WebParam(name = "nombreusuarioabuscar", targetNamespace = "")
-        String nombreusuarioabuscar,
-        @WebParam(name = "contrasenausuario", targetNamespace = "")
-        String contrasenausuario);
-
-    /**
-     * 
-     * @param nombreusuarioabuscar
-     * @param contrasenausuario
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarConsultor", targetNamespace = "http://ws/", className = "ws.ModificarConsultor")
-    @ResponseWrapper(localName = "modificarConsultorResponse", targetNamespace = "http://ws/", className = "ws.ModificarConsultorResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarConsultorRequest", output = "http://ws/WebServiceFV/modificarConsultorResponse")
-    public boolean modificarConsultor(
-        @WebParam(name = "nombreusuarioabuscar", targetNamespace = "")
-        String nombreusuarioabuscar,
-        @WebParam(name = "contrasenausuario", targetNamespace = "")
-        String contrasenausuario);
-
-    /**
-     * 
-     * @param nombreusuarioporbuscar
-     * @return
-     *     returns ws.Administrador
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarAdminpornombre", targetNamespace = "http://ws/", className = "ws.ListarAdminpornombre")
-    @ResponseWrapper(localName = "listarAdminpornombreResponse", targetNamespace = "http://ws/", className = "ws.ListarAdminpornombreResponse")
-    @Action(input = "http://ws/WebServiceFV/listarAdminpornombreRequest", output = "http://ws/WebServiceFV/listarAdminpornombreResponse")
-    public Administrador listarAdminpornombre(
-        @WebParam(name = "nombreusuarioporbuscar", targetNamespace = "")
-        String nombreusuarioporbuscar);
-
-    /**
-     * 
-     * @param rut
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "desactivarCuentaProductor", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaProductor")
-    @ResponseWrapper(localName = "desactivarCuentaProductorResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaProductorResponse")
-    @Action(input = "http://ws/WebServiceFV/desactivarCuentaProductorRequest", output = "http://ws/WebServiceFV/desactivarCuentaProductorResponse")
-    public boolean desactivarCuentaProductor(
-        @WebParam(name = "rut", targetNamespace = "")
-        int rut);
-
-    /**
-     * 
-     * @param rutaeliminar
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarDefinitivoTransportista", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoTransportista")
-    @ResponseWrapper(localName = "eliminarDefinitivoTransportistaResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoTransportistaResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoTransportistaRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoTransportistaResponse")
-    public boolean eliminarDefinitivoTransportista(
-        @WebParam(name = "rutaeliminar", targetNamespace = "")
-        int rutaeliminar);
-
-    /**
-     * 
-     * @param rut
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "desactivarCuentaTransportista", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaTransportista")
-    @ResponseWrapper(localName = "desactivarCuentaTransportistaResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaTransportistaResponse")
-    @Action(input = "http://ws/WebServiceFV/desactivarCuentaTransportistaRequest", output = "http://ws/WebServiceFV/desactivarCuentaTransportistaResponse")
-    public boolean desactivarCuentaTransportista(
-        @WebParam(name = "rut", targetNamespace = "")
-        int rut);
-
-    /**
-     * 
-     * @param rutabuscar
-     * @return
-     *     returns ws.Cliente
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarClienteNormalxRut", targetNamespace = "http://ws/", className = "ws.ListarClienteNormalxRut")
-    @ResponseWrapper(localName = "listarClienteNormalxRutResponse", targetNamespace = "http://ws/", className = "ws.ListarClienteNormalxRutResponse")
-    @Action(input = "http://ws/WebServiceFV/listarClienteNormalxRutRequest", output = "http://ws/WebServiceFV/listarClienteNormalxRutResponse")
-    public Cliente listarClienteNormalxRut(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar);
-
-    /**
-     * 
-     * @param rut
-     * @param dv
-     * @param fechanacimiento
-     * @param comunaIdcomuna
-     * @param direccion
-     * @param apellidomat
-     * @param contrasena
-     * @param correoelectronico
-     * @param nombre
-     * @param apellidopat
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregarClienteNormal", targetNamespace = "http://ws/", className = "ws.AgregarClienteNormal")
-    @ResponseWrapper(localName = "agregarClienteNormalResponse", targetNamespace = "http://ws/", className = "ws.AgregarClienteNormalResponse")
-    @Action(input = "http://ws/WebServiceFV/agregarClienteNormalRequest", output = "http://ws/WebServiceFV/agregarClienteNormalResponse")
-    public boolean agregarClienteNormal(
-        @WebParam(name = "rut", targetNamespace = "")
-        int rut,
-        @WebParam(name = "dv", targetNamespace = "")
-        String dv,
-        @WebParam(name = "nombre", targetNamespace = "")
-        String nombre,
-        @WebParam(name = "apellidopat", targetNamespace = "")
-        String apellidopat,
-        @WebParam(name = "apellidomat", targetNamespace = "")
-        String apellidomat,
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "fechanacimiento", targetNamespace = "")
-        String fechanacimiento,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena,
-        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
-        String comunaIdcomuna);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<ws.Transportista>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarTransportista", targetNamespace = "http://ws/", className = "ws.ListarTransportista")
-    @ResponseWrapper(localName = "listarTransportistaResponse", targetNamespace = "http://ws/", className = "ws.ListarTransportistaResponse")
-    @Action(input = "http://ws/WebServiceFV/listarTransportistaRequest", output = "http://ws/WebServiceFV/listarTransportistaResponse")
-    public List<Transportista> listarTransportista();
-
-    /**
-     * 
-     * @param identificadorabuscar
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "desactivarCuentaClienteEmpresa", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteEmpresa")
-    @ResponseWrapper(localName = "desactivarCuentaClienteEmpresaResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteEmpresaResponse")
-    @Action(input = "http://ws/WebServiceFV/desactivarCuentaClienteEmpresaRequest", output = "http://ws/WebServiceFV/desactivarCuentaClienteEmpresaResponse")
-    public boolean desactivarCuentaClienteEmpresa(
-        @WebParam(name = "identificadorabuscar", targetNamespace = "")
-        String identificadorabuscar);
-
-    /**
-     * 
-     * @param rut
-     * @param dv
-     * @param fechanacimiento
-     * @param direccion
-     * @param apellidomat
-     * @param contrasena
-     * @param correoelectronico
-     * @param nombre
-     * @param apellidopat
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregarTransportista", targetNamespace = "http://ws/", className = "ws.AgregarTransportista")
-    @ResponseWrapper(localName = "agregarTransportistaResponse", targetNamespace = "http://ws/", className = "ws.AgregarTransportistaResponse")
-    @Action(input = "http://ws/WebServiceFV/agregarTransportistaRequest", output = "http://ws/WebServiceFV/agregarTransportistaResponse")
-    public boolean agregarTransportista(
-        @WebParam(name = "rut", targetNamespace = "")
-        int rut,
-        @WebParam(name = "dv", targetNamespace = "")
-        String dv,
-        @WebParam(name = "nombre", targetNamespace = "")
-        String nombre,
-        @WebParam(name = "apellidopat", targetNamespace = "")
-        String apellidopat,
-        @WebParam(name = "apellidomat", targetNamespace = "")
-        String apellidomat,
-        @WebParam(name = "fechanacimiento", targetNamespace = "")
-        String fechanacimiento,
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena);
-
-    /**
-     * 
-     * @param rut
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "desactivarCuentaClienteNormal", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteNormal")
-    @ResponseWrapper(localName = "desactivarCuentaClienteNormalResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteNormalResponse")
-    @Action(input = "http://ws/WebServiceFV/desactivarCuentaClienteNormalRequest", output = "http://ws/WebServiceFV/desactivarCuentaClienteNormalResponse")
-    public boolean desactivarCuentaClienteNormal(
-        @WebParam(name = "rut", targetNamespace = "")
-        int rut);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<ws.ProductorProducto>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarproductosporrutproductor", targetNamespace = "http://ws/", className = "ws.Listarproductosporrutproductor")
-    @ResponseWrapper(localName = "listarproductosporrutproductorResponse", targetNamespace = "http://ws/", className = "ws.ListarproductosporrutproductorResponse")
-    @Action(input = "http://ws/WebServiceFV/listarproductosporrutproductorRequest", output = "http://ws/WebServiceFV/listarproductosporrutproductorResponse")
-    public List<ProductorProducto> listarproductosporrutproductor(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param rutaeliminar
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarDefinitivoProductor", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoProductor")
-    @ResponseWrapper(localName = "eliminarDefinitivoProductorResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoProductorResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoProductorRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoProductorResponse")
-    public boolean eliminarDefinitivoProductor(
-        @WebParam(name = "rutaeliminar", targetNamespace = "")
-        int rutaeliminar);
-
-    /**
-     * 
      * @param nombreusuario
-     * @param contrasenausuario
-     * @param idusuario
+     * @param contrasena
      * @return
-     *     returns boolean
+     *     returns ws.Login
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregarAdministrador", targetNamespace = "http://ws/", className = "ws.AgregarAdministrador")
-    @ResponseWrapper(localName = "agregarAdministradorResponse", targetNamespace = "http://ws/", className = "ws.AgregarAdministradorResponse")
-    @Action(input = "http://ws/WebServiceFV/agregarAdministradorRequest", output = "http://ws/WebServiceFV/agregarAdministradorResponse")
-    public boolean agregarAdministrador(
-        @WebParam(name = "idusuario", targetNamespace = "")
-        String idusuario,
+    @RequestWrapper(localName = "listarlogin2", targetNamespace = "http://ws/", className = "ws.Listarlogin2")
+    @ResponseWrapper(localName = "listarlogin2Response", targetNamespace = "http://ws/", className = "ws.Listarlogin2Response")
+    @Action(input = "http://ws/WebServiceFV/listarlogin2Request", output = "http://ws/WebServiceFV/listarlogin2Response")
+    public Login listarlogin2(
         @WebParam(name = "nombreusuario", targetNamespace = "")
         String nombreusuario,
-        @WebParam(name = "contrasenausuario", targetNamespace = "")
-        String contrasenausuario);
-
-    /**
-     * 
-     * @param rutabuscar
-     * @return
-     *     returns ws.Productor
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarproductorporrut", targetNamespace = "http://ws/", className = "ws.Listarproductorporrut")
-    @ResponseWrapper(localName = "listarproductorporrutResponse", targetNamespace = "http://ws/", className = "ws.ListarproductorporrutResponse")
-    @Action(input = "http://ws/WebServiceFV/listarproductorporrutRequest", output = "http://ws/WebServiceFV/listarproductorporrutResponse")
-    public Productor listarproductorporrut(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar);
-
-    /**
-     * 
-     * @param identificadorabuscar
-     * @param razonsocial
-     * @param comunaIdcomuna
-     * @param direccion
-     * @param contrasena
-     * @param correoelectronico
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarClienteEmpresa", targetNamespace = "http://ws/", className = "ws.ModificarClienteEmpresa")
-    @ResponseWrapper(localName = "modificarClienteEmpresaResponse", targetNamespace = "http://ws/", className = "ws.ModificarClienteEmpresaResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarClienteEmpresaRequest", output = "http://ws/WebServiceFV/modificarClienteEmpresaResponse")
-    public boolean modificarClienteEmpresa(
-        @WebParam(name = "identificadorabuscar", targetNamespace = "")
-        String identificadorabuscar,
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
         @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena,
-        @WebParam(name = "razonsocial", targetNamespace = "")
-        String razonsocial,
-        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
-        String comunaIdcomuna);
+        String contrasena);
 
     /**
      * 
@@ -417,441 +51,12 @@ public interface WebServiceFV {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarConsultor", targetNamespace = "http://ws/", className = "ws.EliminarConsultor")
-    @ResponseWrapper(localName = "eliminarConsultorResponse", targetNamespace = "http://ws/", className = "ws.EliminarConsultorResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarConsultorRequest", output = "http://ws/WebServiceFV/eliminarConsultorResponse")
-    public boolean eliminarConsultor(
+    @RequestWrapper(localName = "eliminarAdmin", targetNamespace = "http://ws/", className = "ws.EliminarAdmin")
+    @ResponseWrapper(localName = "eliminarAdminResponse", targetNamespace = "http://ws/", className = "ws.EliminarAdminResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarAdminRequest", output = "http://ws/WebServiceFV/eliminarAdminResponse")
+    public boolean eliminarAdmin(
         @WebParam(name = "nombreusuarioaeliminar", targetNamespace = "")
         String nombreusuarioaeliminar);
-
-    /**
-     * 
-     * @param razonsocial
-     * @param comunaIdcomuna
-     * @param direccion
-     * @param contrasena
-     * @param correoelectronico
-     * @param identificadorempresa
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregarClienteEmp", targetNamespace = "http://ws/", className = "ws.AgregarClienteEmp")
-    @ResponseWrapper(localName = "agregarClienteEmpResponse", targetNamespace = "http://ws/", className = "ws.AgregarClienteEmpResponse")
-    @Action(input = "http://ws/WebServiceFV/agregarClienteEmpRequest", output = "http://ws/WebServiceFV/agregarClienteEmpResponse")
-    public boolean agregarClienteEmp(
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena,
-        @WebParam(name = "identificadorempresa", targetNamespace = "")
-        String identificadorempresa,
-        @WebParam(name = "razonsocial", targetNamespace = "")
-        String razonsocial,
-        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
-        String comunaIdcomuna);
-
-    /**
-     * 
-     * @param rutaeliminar
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarDefinitivoClienteEmpresa", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteEmpresa")
-    @ResponseWrapper(localName = "eliminarDefinitivoClienteEmpresaResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteEmpresaResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaResponse")
-    public boolean eliminarDefinitivoClienteEmpresa(
-        @WebParam(name = "rutaeliminar", targetNamespace = "")
-        String rutaeliminar);
-
-    /**
-     * 
-     * @param rutabuscar
-     * @return
-     *     returns ws.Transportista
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listartransportistaporrut", targetNamespace = "http://ws/", className = "ws.Listartransportistaporrut")
-    @ResponseWrapper(localName = "listartransportistaporrutResponse", targetNamespace = "http://ws/", className = "ws.ListartransportistaporrutResponse")
-    @Action(input = "http://ws/WebServiceFV/listartransportistaporrutRequest", output = "http://ws/WebServiceFV/listartransportistaporrutResponse")
-    public Transportista listartransportistaporrut(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar);
-
-    /**
-     * 
-     * @param precio
-     * @param img
-     * @param productorRut
-     * @param stock
-     * @param calibreIdcalibre
-     * @param productoIdproducto
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregarNuevoProducto", targetNamespace = "http://ws/", className = "ws.AgregarNuevoProducto")
-    @ResponseWrapper(localName = "agregarNuevoProductoResponse", targetNamespace = "http://ws/", className = "ws.AgregarNuevoProductoResponse")
-    @Action(input = "http://ws/WebServiceFV/agregarNuevoProductoRequest", output = "http://ws/WebServiceFV/agregarNuevoProductoResponse")
-    public boolean agregarNuevoProducto(
-        @WebParam(name = "precio", targetNamespace = "")
-        int precio,
-        @WebParam(name = "stock", targetNamespace = "")
-        int stock,
-        @WebParam(name = "calibre_idcalibre", targetNamespace = "")
-        String calibreIdcalibre,
-        @WebParam(name = "producto_idproducto", targetNamespace = "")
-        String productoIdproducto,
-        @WebParam(name = "productor_rut", targetNamespace = "")
-        int productorRut,
-        @WebParam(name = "img", targetNamespace = "")
-        String img);
-
-    /**
-     * 
-     * @param idcalibre
-     * @param rutproductor
-     * @param idproducto
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarProductoDelProductor", targetNamespace = "http://ws/", className = "ws.EliminarProductoDelProductor")
-    @ResponseWrapper(localName = "eliminarProductoDelProductorResponse", targetNamespace = "http://ws/", className = "ws.EliminarProductoDelProductorResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarProductoDelProductorRequest", output = "http://ws/WebServiceFV/eliminarProductoDelProductorResponse")
-    public boolean eliminarProductoDelProductor(
-        @WebParam(name = "rutproductor", targetNamespace = "")
-        int rutproductor,
-        @WebParam(name = "idcalibre", targetNamespace = "")
-        String idcalibre,
-        @WebParam(name = "idproducto", targetNamespace = "")
-        String idproducto);
-
-    /**
-     * 
-     * @param fechanacimiento
-     * @param rutabuscar
-     * @param comunaIdcomuna
-     * @param direccion
-     * @param apellidomat
-     * @param contrasena
-     * @param correoelectronico
-     * @param nombre
-     * @param apellidopat
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarProductor", targetNamespace = "http://ws/", className = "ws.ModificarProductor")
-    @ResponseWrapper(localName = "modificarProductorResponse", targetNamespace = "http://ws/", className = "ws.ModificarProductorResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarProductorRequest", output = "http://ws/WebServiceFV/modificarProductorResponse")
-    public boolean modificarProductor(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar,
-        @WebParam(name = "nombre", targetNamespace = "")
-        String nombre,
-        @WebParam(name = "apellidopat", targetNamespace = "")
-        String apellidopat,
-        @WebParam(name = "apellidomat", targetNamespace = "")
-        String apellidomat,
-        @WebParam(name = "fechanacimiento", targetNamespace = "")
-        String fechanacimiento,
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena,
-        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
-        String comunaIdcomuna);
-
-    /**
-     * 
-     * @param fechanacimiento
-     * @param rutabuscar
-     * @param comunaIdcomuna
-     * @param direccion
-     * @param apellidomat
-     * @param contrasena
-     * @param correoelectronico
-     * @param nombre
-     * @param apellidopat
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarClientenormal", targetNamespace = "http://ws/", className = "ws.ModificarClientenormal")
-    @ResponseWrapper(localName = "modificarClientenormalResponse", targetNamespace = "http://ws/", className = "ws.ModificarClientenormalResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarClientenormalRequest", output = "http://ws/WebServiceFV/modificarClientenormalResponse")
-    public boolean modificarClientenormal(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar,
-        @WebParam(name = "nombre", targetNamespace = "")
-        String nombre,
-        @WebParam(name = "apellidopat", targetNamespace = "")
-        String apellidopat,
-        @WebParam(name = "apellidomat", targetNamespace = "")
-        String apellidomat,
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "fechanacimiento", targetNamespace = "")
-        String fechanacimiento,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena,
-        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
-        String comunaIdcomuna);
-
-    /**
-     * 
-     * @param fechanacimiento
-     * @param rutabuscar
-     * @param direccion
-     * @param apellidomat
-     * @param contrasena
-     * @param correoelectronico
-     * @param nombre
-     * @param apellidopat
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarTransportista", targetNamespace = "http://ws/", className = "ws.ModificarTransportista")
-    @ResponseWrapper(localName = "modificarTransportistaResponse", targetNamespace = "http://ws/", className = "ws.ModificarTransportistaResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarTransportistaRequest", output = "http://ws/WebServiceFV/modificarTransportistaResponse")
-    public boolean modificarTransportista(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar,
-        @WebParam(name = "nombre", targetNamespace = "")
-        String nombre,
-        @WebParam(name = "apellidopat", targetNamespace = "")
-        String apellidopat,
-        @WebParam(name = "apellidomat", targetNamespace = "")
-        String apellidomat,
-        @WebParam(name = "fechanacimiento", targetNamespace = "")
-        String fechanacimiento,
-        @WebParam(name = "direccion", targetNamespace = "")
-        String direccion,
-        @WebParam(name = "correoelectronico", targetNamespace = "")
-        String correoelectronico,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena);
-
-    /**
-     * 
-     * @param modeloIdmodelo
-     * @param transportistaRut
-     * @param capacidadcarga
-     * @param frigorificotrans
-     * @param permisocirculacion
-     * @param patente
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "agregarTransporte", targetNamespace = "http://ws/", className = "ws.AgregarTransporte")
-    @ResponseWrapper(localName = "agregarTransporteResponse", targetNamespace = "http://ws/", className = "ws.AgregarTransporteResponse")
-    @Action(input = "http://ws/WebServiceFV/agregarTransporteRequest", output = "http://ws/WebServiceFV/agregarTransporteResponse")
-    public boolean agregarTransporte(
-        @WebParam(name = "patente", targetNamespace = "")
-        String patente,
-        @WebParam(name = "capacidadcarga", targetNamespace = "")
-        int capacidadcarga,
-        @WebParam(name = "frigorificotrans", targetNamespace = "")
-        String frigorificotrans,
-        @WebParam(name = "permisocirculacion", targetNamespace = "")
-        String permisocirculacion,
-        @WebParam(name = "transportista_rut", targetNamespace = "")
-        int transportistaRut,
-        @WebParam(name = "modelo_idmodelo", targetNamespace = "")
-        String modeloIdmodelo);
-
-    /**
-     * 
-     * @param rutabuscar
-     * @return
-     *     returns ws.Transporte
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarTransportexRut", targetNamespace = "http://ws/", className = "ws.ListarTransportexRut")
-    @ResponseWrapper(localName = "listarTransportexRutResponse", targetNamespace = "http://ws/", className = "ws.ListarTransportexRutResponse")
-    @Action(input = "http://ws/WebServiceFV/listarTransportexRutRequest", output = "http://ws/WebServiceFV/listarTransportexRutResponse")
-    public Transporte listarTransportexRut(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar);
-
-    /**
-     * 
-     * @param rutaeliminar
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarDefinitivoClienteNormal", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteNormal")
-    @ResponseWrapper(localName = "eliminarDefinitivoClienteNormalResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteNormalResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoClienteNormalRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoClienteNormalResponse")
-    public boolean eliminarDefinitivoClienteNormal(
-        @WebParam(name = "rutaeliminar", targetNamespace = "")
-        int rutaeliminar);
-
-    /**
-     * 
-     * @param productorRut
-     * @param cantidad
-     * @param idproducto
-     * @param pedidoIdpedido
-     * @return
-     *     returns java.lang.Boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "crearNuevoDetallePedidoo", targetNamespace = "http://ws/", className = "ws.CrearNuevoDetallePedidoo")
-    @ResponseWrapper(localName = "crearNuevoDetallePedidooResponse", targetNamespace = "http://ws/", className = "ws.CrearNuevoDetallePedidooResponse")
-    @Action(input = "http://ws/WebServiceFV/crearNuevoDetallePedidooRequest", output = "http://ws/WebServiceFV/crearNuevoDetallePedidooResponse")
-    public Boolean crearNuevoDetallePedidoo(
-        @WebParam(name = "cantidad", targetNamespace = "")
-        int cantidad,
-        @WebParam(name = "idproducto", targetNamespace = "")
-        String idproducto,
-        @WebParam(name = "productor_rut", targetNamespace = "")
-        int productorRut,
-        @WebParam(name = "pedido_idpedido", targetNamespace = "")
-        String pedidoIdpedido);
-
-    /**
-     * 
-     * @param patenteaeliminar
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarTransportexPatente", targetNamespace = "http://ws/", className = "ws.EliminarTransportexPatente")
-    @ResponseWrapper(localName = "eliminarTransportexPatenteResponse", targetNamespace = "http://ws/", className = "ws.EliminarTransportexPatenteResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarTransportexPatenteRequest", output = "http://ws/WebServiceFV/eliminarTransportexPatenteResponse")
-    public boolean eliminarTransportexPatente(
-        @WebParam(name = "patenteaeliminar", targetNamespace = "")
-        String patenteaeliminar);
-
-    /**
-     * 
-     * @param nombreusuarioporbuscar
-     * @return
-     *     returns ws.Consultor
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarconsultorporpornombre", targetNamespace = "http://ws/", className = "ws.Listarconsultorporpornombre")
-    @ResponseWrapper(localName = "listarconsultorporpornombreResponse", targetNamespace = "http://ws/", className = "ws.ListarconsultorporpornombreResponse")
-    @Action(input = "http://ws/WebServiceFV/listarconsultorporpornombreRequest", output = "http://ws/WebServiceFV/listarconsultorporpornombreResponse")
-    public Consultor listarconsultorporpornombre(
-        @WebParam(name = "nombreusuarioporbuscar", targetNamespace = "")
-        String nombreusuarioporbuscar);
-
-    /**
-     * 
-     * @param rutabuscar
-     * @param capacidadcarga
-     * @param frigorificotrans
-     * @param permisocirculacion
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modificarTransporte", targetNamespace = "http://ws/", className = "ws.ModificarTransporte")
-    @ResponseWrapper(localName = "modificarTransporteResponse", targetNamespace = "http://ws/", className = "ws.ModificarTransporteResponse")
-    @Action(input = "http://ws/WebServiceFV/modificarTransporteRequest", output = "http://ws/WebServiceFV/modificarTransporteResponse")
-    public boolean modificarTransporte(
-        @WebParam(name = "rutabuscar", targetNamespace = "")
-        int rutabuscar,
-        @WebParam(name = "capacidadcarga", targetNamespace = "")
-        int capacidadcarga,
-        @WebParam(name = "frigorificotrans", targetNamespace = "")
-        String frigorificotrans,
-        @WebParam(name = "permisocirculacion", targetNamespace = "")
-        String permisocirculacion);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<ws.Administrador>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarAdmin", targetNamespace = "http://ws/", className = "ws.ListarAdmin")
-    @ResponseWrapper(localName = "listarAdminResponse", targetNamespace = "http://ws/", className = "ws.ListarAdminResponse")
-    @Action(input = "http://ws/WebServiceFV/listarAdminRequest", output = "http://ws/WebServiceFV/listarAdminResponse")
-    public List<Administrador> listarAdmin();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<ws.Productor>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarProductor", targetNamespace = "http://ws/", className = "ws.ListarProductor")
-    @ResponseWrapper(localName = "listarProductorResponse", targetNamespace = "http://ws/", className = "ws.ListarProductorResponse")
-    @Action(input = "http://ws/WebServiceFV/listarProductorRequest", output = "http://ws/WebServiceFV/listarProductorResponse")
-    public List<Productor> listarProductor();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<ws.Cliente>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarClientes", targetNamespace = "http://ws/", className = "ws.ListarClientes")
-    @ResponseWrapper(localName = "listarClientesResponse", targetNamespace = "http://ws/", className = "ws.ListarClientesResponse")
-    @Action(input = "http://ws/WebServiceFV/listarClientesRequest", output = "http://ws/WebServiceFV/listarClientesResponse")
-    public List<Cliente> listarClientes();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<ws.Consultor>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarConsultor", targetNamespace = "http://ws/", className = "ws.ListarConsultor")
-    @ResponseWrapper(localName = "listarConsultorResponse", targetNamespace = "http://ws/", className = "ws.ListarConsultorResponse")
-    @Action(input = "http://ws/WebServiceFV/listarConsultorRequest", output = "http://ws/WebServiceFV/listarConsultorResponse")
-    public List<Consultor> listarConsultor();
-
-    /**
-     * 
-     * @param contrasena
-     * @param correoelectronicoingreso
-     * @return
-     *     returns ws.Login
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarlogin1", targetNamespace = "http://ws/", className = "ws.Listarlogin1")
-    @ResponseWrapper(localName = "listarlogin1Response", targetNamespace = "http://ws/", className = "ws.Listarlogin1Response")
-    @Action(input = "http://ws/WebServiceFV/listarlogin1Request", output = "http://ws/WebServiceFV/listarlogin1Response")
-    public Login listarlogin1(
-        @WebParam(name = "correoelectronicoingreso", targetNamespace = "")
-        String correoelectronicoingreso,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena);
 
     /**
      * 
@@ -864,24 +69,6 @@ public interface WebServiceFV {
     @ResponseWrapper(localName = "listarProductosResponse", targetNamespace = "http://ws/", className = "ws.ListarProductosResponse")
     @Action(input = "http://ws/WebServiceFV/listarProductosRequest", output = "http://ws/WebServiceFV/listarProductosResponse")
     public List<ProductorProducto> listarProductos();
-
-    /**
-     * 
-     * @param contrasena
-     * @param correoelectronicoingreso
-     * @return
-     *     returns ws.Login
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarlogin2", targetNamespace = "http://ws/", className = "ws.Listarlogin2")
-    @ResponseWrapper(localName = "listarlogin2Response", targetNamespace = "http://ws/", className = "ws.Listarlogin2Response")
-    @Action(input = "http://ws/WebServiceFV/listarlogin2Request", output = "http://ws/WebServiceFV/listarlogin2Response")
-    public Login listarlogin2(
-        @WebParam(name = "correoelectronicoingreso", targetNamespace = "")
-        String correoelectronicoingreso,
-        @WebParam(name = "contrasena", targetNamespace = "")
-        String contrasena);
 
     /**
      * 
@@ -948,33 +135,810 @@ public interface WebServiceFV {
 
     /**
      * 
-     * @param nombreusuarioaeliminar
      * @return
-     *     returns boolean
+     *     returns java.util.List<ws.Calibre>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "eliminarAdmin", targetNamespace = "http://ws/", className = "ws.EliminarAdmin")
-    @ResponseWrapper(localName = "eliminarAdminResponse", targetNamespace = "http://ws/", className = "ws.EliminarAdminResponse")
-    @Action(input = "http://ws/WebServiceFV/eliminarAdminRequest", output = "http://ws/WebServiceFV/eliminarAdminResponse")
-    public boolean eliminarAdmin(
-        @WebParam(name = "nombreusuarioaeliminar", targetNamespace = "")
-        String nombreusuarioaeliminar);
+    @RequestWrapper(localName = "listarCalibre", targetNamespace = "http://ws/", className = "ws.ListarCalibre")
+    @ResponseWrapper(localName = "listarCalibreResponse", targetNamespace = "http://ws/", className = "ws.ListarCalibreResponse")
+    @Action(input = "http://ws/WebServiceFV/listarCalibreRequest", output = "http://ws/WebServiceFV/listarCalibreResponse")
+    public List<Calibre> listarCalibre();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Productor>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarProductor", targetNamespace = "http://ws/", className = "ws.ListarProductor")
+    @ResponseWrapper(localName = "listarProductorResponse", targetNamespace = "http://ws/", className = "ws.ListarProductorResponse")
+    @Action(input = "http://ws/WebServiceFV/listarProductorRequest", output = "http://ws/WebServiceFV/listarProductorResponse")
+    public List<Productor> listarProductor();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Administrador>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarAdmin", targetNamespace = "http://ws/", className = "ws.ListarAdmin")
+    @ResponseWrapper(localName = "listarAdminResponse", targetNamespace = "http://ws/", className = "ws.ListarAdminResponse")
+    @Action(input = "http://ws/WebServiceFV/listarAdminRequest", output = "http://ws/WebServiceFV/listarAdminResponse")
+    public List<Administrador> listarAdmin();
 
     /**
      * 
      * @param clienteIdCliente
      * @return
-     *     returns java.lang.Boolean
+     *     returns java.lang.String
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "crearNuevoPedido", targetNamespace = "http://ws/", className = "ws.CrearNuevoPedido")
     @ResponseWrapper(localName = "crearNuevoPedidoResponse", targetNamespace = "http://ws/", className = "ws.CrearNuevoPedidoResponse")
     @Action(input = "http://ws/WebServiceFV/crearNuevoPedidoRequest", output = "http://ws/WebServiceFV/crearNuevoPedidoResponse")
-    public Boolean crearNuevoPedido(
+    public String crearNuevoPedido(
         @WebParam(name = "cliente_id_cliente", targetNamespace = "")
         String clienteIdCliente);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Cliente>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarClientes", targetNamespace = "http://ws/", className = "ws.ListarClientes")
+    @ResponseWrapper(localName = "listarClientesResponse", targetNamespace = "http://ws/", className = "ws.ListarClientesResponse")
+    @Action(input = "http://ws/WebServiceFV/listarClientesRequest", output = "http://ws/WebServiceFV/listarClientesResponse")
+    public List<Cliente> listarClientes();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Consultor>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarConsultor", targetNamespace = "http://ws/", className = "ws.ListarConsultor")
+    @ResponseWrapper(localName = "listarConsultorResponse", targetNamespace = "http://ws/", className = "ws.ListarConsultorResponse")
+    @Action(input = "http://ws/WebServiceFV/listarConsultorRequest", output = "http://ws/WebServiceFV/listarConsultorResponse")
+    public List<Consultor> listarConsultor();
+
+    /**
+     * 
+     * @param contrasena
+     * @param correoelectronicoingreso
+     * @return
+     *     returns ws.Login
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarlogin1", targetNamespace = "http://ws/", className = "ws.Listarlogin1")
+    @ResponseWrapper(localName = "listarlogin1Response", targetNamespace = "http://ws/", className = "ws.Listarlogin1Response")
+    @Action(input = "http://ws/WebServiceFV/listarlogin1Request", output = "http://ws/WebServiceFV/listarlogin1Response")
+    public Login listarlogin1(
+        @WebParam(name = "correoelectronicoingreso", targetNamespace = "")
+        String correoelectronicoingreso,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena);
+
+    /**
+     * 
+     * @param fechanacimiento
+     * @param rutabuscar
+     * @param comunaIdcomuna
+     * @param direccion
+     * @param apellidomat
+     * @param contrasena
+     * @param correoelectronico
+     * @param nombre
+     * @param apellidopat
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarProductor", targetNamespace = "http://ws/", className = "ws.ModificarProductor")
+    @ResponseWrapper(localName = "modificarProductorResponse", targetNamespace = "http://ws/", className = "ws.ModificarProductorResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarProductorRequest", output = "http://ws/WebServiceFV/modificarProductorResponse")
+    public boolean modificarProductor(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar,
+        @WebParam(name = "nombre", targetNamespace = "")
+        String nombre,
+        @WebParam(name = "apellidopat", targetNamespace = "")
+        String apellidopat,
+        @WebParam(name = "apellidomat", targetNamespace = "")
+        String apellidomat,
+        @WebParam(name = "fechanacimiento", targetNamespace = "")
+        String fechanacimiento,
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena,
+        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
+        String comunaIdcomuna);
+
+    /**
+     * 
+     * @param rutabuscar
+     * @return
+     *     returns ws.Productor
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarproductorporrut", targetNamespace = "http://ws/", className = "ws.Listarproductorporrut")
+    @ResponseWrapper(localName = "listarproductorporrutResponse", targetNamespace = "http://ws/", className = "ws.ListarproductorporrutResponse")
+    @Action(input = "http://ws/WebServiceFV/listarproductorporrutRequest", output = "http://ws/WebServiceFV/listarproductorporrutResponse")
+    public Productor listarproductorporrut(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar);
+
+    /**
+     * 
+     * @param rut
+     * @param dv
+     * @param fechanacimiento
+     * @param comunaIdcomuna
+     * @param direccion
+     * @param apellidomat
+     * @param contrasena
+     * @param correoelectronico
+     * @param nombre
+     * @param apellidopat
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregarClienteNormal", targetNamespace = "http://ws/", className = "ws.AgregarClienteNormal")
+    @ResponseWrapper(localName = "agregarClienteNormalResponse", targetNamespace = "http://ws/", className = "ws.AgregarClienteNormalResponse")
+    @Action(input = "http://ws/WebServiceFV/agregarClienteNormalRequest", output = "http://ws/WebServiceFV/agregarClienteNormalResponse")
+    public boolean agregarClienteNormal(
+        @WebParam(name = "rut", targetNamespace = "")
+        int rut,
+        @WebParam(name = "dv", targetNamespace = "")
+        String dv,
+        @WebParam(name = "nombre", targetNamespace = "")
+        String nombre,
+        @WebParam(name = "apellidopat", targetNamespace = "")
+        String apellidopat,
+        @WebParam(name = "apellidomat", targetNamespace = "")
+        String apellidomat,
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "fechanacimiento", targetNamespace = "")
+        String fechanacimiento,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena,
+        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
+        String comunaIdcomuna);
+
+    /**
+     * 
+     * @param fechanacimiento
+     * @param rutabuscar
+     * @param direccion
+     * @param apellidomat
+     * @param contrasena
+     * @param correoelectronico
+     * @param nombre
+     * @param apellidopat
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarTransportista", targetNamespace = "http://ws/", className = "ws.ModificarTransportista")
+    @ResponseWrapper(localName = "modificarTransportistaResponse", targetNamespace = "http://ws/", className = "ws.ModificarTransportistaResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarTransportistaRequest", output = "http://ws/WebServiceFV/modificarTransportistaResponse")
+    public boolean modificarTransportista(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar,
+        @WebParam(name = "nombre", targetNamespace = "")
+        String nombre,
+        @WebParam(name = "apellidopat", targetNamespace = "")
+        String apellidopat,
+        @WebParam(name = "apellidomat", targetNamespace = "")
+        String apellidomat,
+        @WebParam(name = "fechanacimiento", targetNamespace = "")
+        String fechanacimiento,
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena);
+
+    /**
+     * 
+     * @param identificadorabuscar
+     * @param razonsocial
+     * @param comunaIdcomuna
+     * @param direccion
+     * @param contrasena
+     * @param correoelectronico
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarClienteEmpresa", targetNamespace = "http://ws/", className = "ws.ModificarClienteEmpresa")
+    @ResponseWrapper(localName = "modificarClienteEmpresaResponse", targetNamespace = "http://ws/", className = "ws.ModificarClienteEmpresaResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarClienteEmpresaRequest", output = "http://ws/WebServiceFV/modificarClienteEmpresaResponse")
+    public boolean modificarClienteEmpresa(
+        @WebParam(name = "identificadorabuscar", targetNamespace = "")
+        String identificadorabuscar,
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena,
+        @WebParam(name = "razonsocial", targetNamespace = "")
+        String razonsocial,
+        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
+        String comunaIdcomuna);
+
+    /**
+     * 
+     * @param nombreusuarioabuscar
+     * @param contrasenausuario
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarAdministrador", targetNamespace = "http://ws/", className = "ws.ModificarAdministrador")
+    @ResponseWrapper(localName = "modificarAdministradorResponse", targetNamespace = "http://ws/", className = "ws.ModificarAdministradorResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarAdministradorRequest", output = "http://ws/WebServiceFV/modificarAdministradorResponse")
+    public boolean modificarAdministrador(
+        @WebParam(name = "nombreusuarioabuscar", targetNamespace = "")
+        String nombreusuarioabuscar,
+        @WebParam(name = "contrasenausuario", targetNamespace = "")
+        String contrasenausuario);
+
+    /**
+     * 
+     * @param rutaeliminar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarDefinitivoProductor", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoProductor")
+    @ResponseWrapper(localName = "eliminarDefinitivoProductorResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoProductorResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoProductorRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoProductorResponse")
+    public boolean eliminarDefinitivoProductor(
+        @WebParam(name = "rutaeliminar", targetNamespace = "")
+        int rutaeliminar);
+
+    /**
+     * 
+     * @param rut
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "desactivarCuentaProductor", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaProductor")
+    @ResponseWrapper(localName = "desactivarCuentaProductorResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaProductorResponse")
+    @Action(input = "http://ws/WebServiceFV/desactivarCuentaProductorRequest", output = "http://ws/WebServiceFV/desactivarCuentaProductorResponse")
+    public boolean desactivarCuentaProductor(
+        @WebParam(name = "rut", targetNamespace = "")
+        int rut);
+
+    /**
+     * 
+     * @param nombreusuarioaeliminar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarConsultor", targetNamespace = "http://ws/", className = "ws.EliminarConsultor")
+    @ResponseWrapper(localName = "eliminarConsultorResponse", targetNamespace = "http://ws/", className = "ws.EliminarConsultorResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarConsultorRequest", output = "http://ws/WebServiceFV/eliminarConsultorResponse")
+    public boolean eliminarConsultor(
+        @WebParam(name = "nombreusuarioaeliminar", targetNamespace = "")
+        String nombreusuarioaeliminar);
+
+    /**
+     * 
+     * @param fechanacimiento
+     * @param rutabuscar
+     * @param comunaIdcomuna
+     * @param direccion
+     * @param apellidomat
+     * @param contrasena
+     * @param correoelectronico
+     * @param nombre
+     * @param apellidopat
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarClientenormal", targetNamespace = "http://ws/", className = "ws.ModificarClientenormal")
+    @ResponseWrapper(localName = "modificarClientenormalResponse", targetNamespace = "http://ws/", className = "ws.ModificarClientenormalResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarClientenormalRequest", output = "http://ws/WebServiceFV/modificarClientenormalResponse")
+    public boolean modificarClientenormal(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar,
+        @WebParam(name = "nombre", targetNamespace = "")
+        String nombre,
+        @WebParam(name = "apellidopat", targetNamespace = "")
+        String apellidopat,
+        @WebParam(name = "apellidomat", targetNamespace = "")
+        String apellidomat,
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "fechanacimiento", targetNamespace = "")
+        String fechanacimiento,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena,
+        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
+        String comunaIdcomuna);
+
+    /**
+     * 
+     * @param rutaeliminar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarDefinitivoClienteNormal", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteNormal")
+    @ResponseWrapper(localName = "eliminarDefinitivoClienteNormalResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteNormalResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoClienteNormalRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoClienteNormalResponse")
+    public boolean eliminarDefinitivoClienteNormal(
+        @WebParam(name = "rutaeliminar", targetNamespace = "")
+        int rutaeliminar);
+
+    /**
+     * 
+     * @param rutabuscar
+     * @return
+     *     returns ws.Cliente
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarClienteNormalxRut", targetNamespace = "http://ws/", className = "ws.ListarClienteNormalxRut")
+    @ResponseWrapper(localName = "listarClienteNormalxRutResponse", targetNamespace = "http://ws/", className = "ws.ListarClienteNormalxRutResponse")
+    @Action(input = "http://ws/WebServiceFV/listarClienteNormalxRutRequest", output = "http://ws/WebServiceFV/listarClienteNormalxRutResponse")
+    public Cliente listarClienteNormalxRut(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar);
+
+    /**
+     * 
+     * @param rut
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "desactivarCuentaClienteNormal", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteNormal")
+    @ResponseWrapper(localName = "desactivarCuentaClienteNormalResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteNormalResponse")
+    @Action(input = "http://ws/WebServiceFV/desactivarCuentaClienteNormalRequest", output = "http://ws/WebServiceFV/desactivarCuentaClienteNormalResponse")
+    public boolean desactivarCuentaClienteNormal(
+        @WebParam(name = "rut", targetNamespace = "")
+        int rut);
+
+    /**
+     * 
+     * @param razonsocial
+     * @param comunaIdcomuna
+     * @param direccion
+     * @param contrasena
+     * @param correoelectronico
+     * @param identificadorempresa
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregarClienteEmp", targetNamespace = "http://ws/", className = "ws.AgregarClienteEmp")
+    @ResponseWrapper(localName = "agregarClienteEmpResponse", targetNamespace = "http://ws/", className = "ws.AgregarClienteEmpResponse")
+    @Action(input = "http://ws/WebServiceFV/agregarClienteEmpRequest", output = "http://ws/WebServiceFV/agregarClienteEmpResponse")
+    public boolean agregarClienteEmp(
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena,
+        @WebParam(name = "identificadorempresa", targetNamespace = "")
+        String identificadorempresa,
+        @WebParam(name = "razonsocial", targetNamespace = "")
+        String razonsocial,
+        @WebParam(name = "comuna_idcomuna", targetNamespace = "")
+        String comunaIdcomuna);
+
+    /**
+     * 
+     * @param idCliente
+     * @param rutaeliminar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarDefinitivoClienteEmpresa", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteEmpresa")
+    @ResponseWrapper(localName = "eliminarDefinitivoClienteEmpresaResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoClienteEmpresaResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaResponse")
+    public boolean eliminarDefinitivoClienteEmpresa(
+        @WebParam(name = "rutaeliminar", targetNamespace = "")
+        String rutaeliminar,
+        @WebParam(name = "id_cliente", targetNamespace = "")
+        String idCliente);
+
+    /**
+     * 
+     * @param rut
+     * @param dv
+     * @param fechanacimiento
+     * @param direccion
+     * @param apellidomat
+     * @param contrasena
+     * @param correoelectronico
+     * @param nombre
+     * @param apellidopat
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregarTransportista", targetNamespace = "http://ws/", className = "ws.AgregarTransportista")
+    @ResponseWrapper(localName = "agregarTransportistaResponse", targetNamespace = "http://ws/", className = "ws.AgregarTransportistaResponse")
+    @Action(input = "http://ws/WebServiceFV/agregarTransportistaRequest", output = "http://ws/WebServiceFV/agregarTransportistaResponse")
+    public boolean agregarTransportista(
+        @WebParam(name = "rut", targetNamespace = "")
+        int rut,
+        @WebParam(name = "dv", targetNamespace = "")
+        String dv,
+        @WebParam(name = "nombre", targetNamespace = "")
+        String nombre,
+        @WebParam(name = "apellidopat", targetNamespace = "")
+        String apellidopat,
+        @WebParam(name = "apellidomat", targetNamespace = "")
+        String apellidomat,
+        @WebParam(name = "fechanacimiento", targetNamespace = "")
+        String fechanacimiento,
+        @WebParam(name = "direccion", targetNamespace = "")
+        String direccion,
+        @WebParam(name = "correoelectronico", targetNamespace = "")
+        String correoelectronico,
+        @WebParam(name = "contrasena", targetNamespace = "")
+        String contrasena);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Transportista>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarTransportista", targetNamespace = "http://ws/", className = "ws.ListarTransportista")
+    @ResponseWrapper(localName = "listarTransportistaResponse", targetNamespace = "http://ws/", className = "ws.ListarTransportistaResponse")
+    @Action(input = "http://ws/WebServiceFV/listarTransportistaRequest", output = "http://ws/WebServiceFV/listarTransportistaResponse")
+    public List<Transportista> listarTransportista();
+
+    /**
+     * 
+     * @param nombreusuario
+     * @param contrasenausuario
+     * @param idusuario
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregarAdministrador", targetNamespace = "http://ws/", className = "ws.AgregarAdministrador")
+    @ResponseWrapper(localName = "agregarAdministradorResponse", targetNamespace = "http://ws/", className = "ws.AgregarAdministradorResponse")
+    @Action(input = "http://ws/WebServiceFV/agregarAdministradorRequest", output = "http://ws/WebServiceFV/agregarAdministradorResponse")
+    public boolean agregarAdministrador(
+        @WebParam(name = "idusuario", targetNamespace = "")
+        String idusuario,
+        @WebParam(name = "nombreusuario", targetNamespace = "")
+        String nombreusuario,
+        @WebParam(name = "contrasenausuario", targetNamespace = "")
+        String contrasenausuario);
+
+    /**
+     * 
+     * @param nombreusuarioporbuscar
+     * @return
+     *     returns ws.Administrador
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarAdminpornombre", targetNamespace = "http://ws/", className = "ws.ListarAdminpornombre")
+    @ResponseWrapper(localName = "listarAdminpornombreResponse", targetNamespace = "http://ws/", className = "ws.ListarAdminpornombreResponse")
+    @Action(input = "http://ws/WebServiceFV/listarAdminpornombreRequest", output = "http://ws/WebServiceFV/listarAdminpornombreResponse")
+    public Administrador listarAdminpornombre(
+        @WebParam(name = "nombreusuarioporbuscar", targetNamespace = "")
+        String nombreusuarioporbuscar);
+
+    /**
+     * 
+     * @param identificadorabuscar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "desactivarCuentaClienteEmpresa", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteEmpresa")
+    @ResponseWrapper(localName = "desactivarCuentaClienteEmpresaResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaClienteEmpresaResponse")
+    @Action(input = "http://ws/WebServiceFV/desactivarCuentaClienteEmpresaRequest", output = "http://ws/WebServiceFV/desactivarCuentaClienteEmpresaResponse")
+    public boolean desactivarCuentaClienteEmpresa(
+        @WebParam(name = "identificadorabuscar", targetNamespace = "")
+        String identificadorabuscar);
+
+    /**
+     * 
+     * @param nombreusuarioabuscar
+     * @param contrasenausuario
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarConsultor", targetNamespace = "http://ws/", className = "ws.ModificarConsultor")
+    @ResponseWrapper(localName = "modificarConsultorResponse", targetNamespace = "http://ws/", className = "ws.ModificarConsultorResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarConsultorRequest", output = "http://ws/WebServiceFV/modificarConsultorResponse")
+    public boolean modificarConsultor(
+        @WebParam(name = "nombreusuarioabuscar", targetNamespace = "")
+        String nombreusuarioabuscar,
+        @WebParam(name = "contrasenausuario", targetNamespace = "")
+        String contrasenausuario);
+
+    /**
+     * 
+     * @param nombreusuarioporbuscar
+     * @return
+     *     returns ws.Consultor
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarconsultorporpornombre", targetNamespace = "http://ws/", className = "ws.Listarconsultorporpornombre")
+    @ResponseWrapper(localName = "listarconsultorporpornombreResponse", targetNamespace = "http://ws/", className = "ws.ListarconsultorporpornombreResponse")
+    @Action(input = "http://ws/WebServiceFV/listarconsultorporpornombreRequest", output = "http://ws/WebServiceFV/listarconsultorporpornombreResponse")
+    public Consultor listarconsultorporpornombre(
+        @WebParam(name = "nombreusuarioporbuscar", targetNamespace = "")
+        String nombreusuarioporbuscar);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.ProductorProducto>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarproductosporrutproductor", targetNamespace = "http://ws/", className = "ws.Listarproductosporrutproductor")
+    @ResponseWrapper(localName = "listarproductosporrutproductorResponse", targetNamespace = "http://ws/", className = "ws.ListarproductosporrutproductorResponse")
+    @Action(input = "http://ws/WebServiceFV/listarproductosporrutproductorRequest", output = "http://ws/WebServiceFV/listarproductosporrutproductorResponse")
+    public List<ProductorProducto> listarproductosporrutproductor(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param idcalibre
+     * @param rutproductor
+     * @param idproducto
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarProductoDelProductor", targetNamespace = "http://ws/", className = "ws.EliminarProductoDelProductor")
+    @ResponseWrapper(localName = "eliminarProductoDelProductorResponse", targetNamespace = "http://ws/", className = "ws.EliminarProductoDelProductorResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarProductoDelProductorRequest", output = "http://ws/WebServiceFV/eliminarProductoDelProductorResponse")
+    public boolean eliminarProductoDelProductor(
+        @WebParam(name = "rutproductor", targetNamespace = "")
+        int rutproductor,
+        @WebParam(name = "idcalibre", targetNamespace = "")
+        String idcalibre,
+        @WebParam(name = "idproducto", targetNamespace = "")
+        String idproducto);
+
+    /**
+     * 
+     * @param productorRut
+     * @param cantidad
+     * @param idproducto
+     * @param calibreIdcalibre
+     * @param pedidoIdpedido
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "crearNuevoDetallePedidoo", targetNamespace = "http://ws/", className = "ws.CrearNuevoDetallePedidoo")
+    @ResponseWrapper(localName = "crearNuevoDetallePedidooResponse", targetNamespace = "http://ws/", className = "ws.CrearNuevoDetallePedidooResponse")
+    @Action(input = "http://ws/WebServiceFV/crearNuevoDetallePedidooRequest", output = "http://ws/WebServiceFV/crearNuevoDetallePedidooResponse")
+    public Boolean crearNuevoDetallePedidoo(
+        @WebParam(name = "cantidad", targetNamespace = "")
+        int cantidad,
+        @WebParam(name = "idproducto", targetNamespace = "")
+        String idproducto,
+        @WebParam(name = "productor_rut", targetNamespace = "")
+        int productorRut,
+        @WebParam(name = "pedido_idpedido", targetNamespace = "")
+        String pedidoIdpedido,
+        @WebParam(name = "calibre_idcalibre", targetNamespace = "")
+        String calibreIdcalibre);
+
+    /**
+     * 
+     * @param precio
+     * @param img
+     * @param productorRut
+     * @param stock
+     * @param calibreIdcalibre
+     * @param productoIdproducto
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregarNuevoProducto", targetNamespace = "http://ws/", className = "ws.AgregarNuevoProducto")
+    @ResponseWrapper(localName = "agregarNuevoProductoResponse", targetNamespace = "http://ws/", className = "ws.AgregarNuevoProductoResponse")
+    @Action(input = "http://ws/WebServiceFV/agregarNuevoProductoRequest", output = "http://ws/WebServiceFV/agregarNuevoProductoResponse")
+    public boolean agregarNuevoProducto(
+        @WebParam(name = "precio", targetNamespace = "")
+        int precio,
+        @WebParam(name = "stock", targetNamespace = "")
+        int stock,
+        @WebParam(name = "calibre_idcalibre", targetNamespace = "")
+        String calibreIdcalibre,
+        @WebParam(name = "producto_idproducto", targetNamespace = "")
+        String productoIdproducto,
+        @WebParam(name = "productor_rut", targetNamespace = "")
+        int productorRut,
+        @WebParam(name = "img", targetNamespace = "")
+        String img);
+
+    /**
+     * 
+     * @param rutaeliminar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarDefinitivoTransportista", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoTransportista")
+    @ResponseWrapper(localName = "eliminarDefinitivoTransportistaResponse", targetNamespace = "http://ws/", className = "ws.EliminarDefinitivoTransportistaResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarDefinitivoTransportistaRequest", output = "http://ws/WebServiceFV/eliminarDefinitivoTransportistaResponse")
+    public boolean eliminarDefinitivoTransportista(
+        @WebParam(name = "rutaeliminar", targetNamespace = "")
+        int rutaeliminar);
+
+    /**
+     * 
+     * @param modeloIdmodelo
+     * @param transportistaRut
+     * @param capacidadcarga
+     * @param frigorificotrans
+     * @param permisocirculacion
+     * @param patente
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "agregarTransporte", targetNamespace = "http://ws/", className = "ws.AgregarTransporte")
+    @ResponseWrapper(localName = "agregarTransporteResponse", targetNamespace = "http://ws/", className = "ws.AgregarTransporteResponse")
+    @Action(input = "http://ws/WebServiceFV/agregarTransporteRequest", output = "http://ws/WebServiceFV/agregarTransporteResponse")
+    public boolean agregarTransporte(
+        @WebParam(name = "patente", targetNamespace = "")
+        String patente,
+        @WebParam(name = "capacidadcarga", targetNamespace = "")
+        int capacidadcarga,
+        @WebParam(name = "frigorificotrans", targetNamespace = "")
+        String frigorificotrans,
+        @WebParam(name = "permisocirculacion", targetNamespace = "")
+        String permisocirculacion,
+        @WebParam(name = "transportista_rut", targetNamespace = "")
+        int transportistaRut,
+        @WebParam(name = "modelo_idmodelo", targetNamespace = "")
+        String modeloIdmodelo);
+
+    /**
+     * 
+     * @param patenteaeliminar
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "eliminarTransportexPatente", targetNamespace = "http://ws/", className = "ws.EliminarTransportexPatente")
+    @ResponseWrapper(localName = "eliminarTransportexPatenteResponse", targetNamespace = "http://ws/", className = "ws.EliminarTransportexPatenteResponse")
+    @Action(input = "http://ws/WebServiceFV/eliminarTransportexPatenteRequest", output = "http://ws/WebServiceFV/eliminarTransportexPatenteResponse")
+    public boolean eliminarTransportexPatente(
+        @WebParam(name = "patenteaeliminar", targetNamespace = "")
+        String patenteaeliminar);
+
+    /**
+     * 
+     * @param rut
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "desactivarCuentaTransportista", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaTransportista")
+    @ResponseWrapper(localName = "desactivarCuentaTransportistaResponse", targetNamespace = "http://ws/", className = "ws.DesactivarCuentaTransportistaResponse")
+    @Action(input = "http://ws/WebServiceFV/desactivarCuentaTransportistaRequest", output = "http://ws/WebServiceFV/desactivarCuentaTransportistaResponse")
+    public boolean desactivarCuentaTransportista(
+        @WebParam(name = "rut", targetNamespace = "")
+        int rut);
+
+    /**
+     * 
+     * @param rutabuscar
+     * @return
+     *     returns ws.Transportista
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listartransportistaporrut", targetNamespace = "http://ws/", className = "ws.Listartransportistaporrut")
+    @ResponseWrapper(localName = "listartransportistaporrutResponse", targetNamespace = "http://ws/", className = "ws.ListartransportistaporrutResponse")
+    @Action(input = "http://ws/WebServiceFV/listartransportistaporrutRequest", output = "http://ws/WebServiceFV/listartransportistaporrutResponse")
+    public Transportista listartransportistaporrut(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Transporte>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarTransportexRut", targetNamespace = "http://ws/", className = "ws.ListarTransportexRut")
+    @ResponseWrapper(localName = "listarTransportexRutResponse", targetNamespace = "http://ws/", className = "ws.ListarTransportexRutResponse")
+    @Action(input = "http://ws/WebServiceFV/listarTransportexRutRequest", output = "http://ws/WebServiceFV/listarTransportexRutResponse")
+    public List<Transporte> listarTransportexRut(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param rutabuscar
+     * @param capacidadcarga
+     * @param frigorificotrans
+     * @param permisocirculacion
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarTransporte", targetNamespace = "http://ws/", className = "ws.ModificarTransporte")
+    @ResponseWrapper(localName = "modificarTransporteResponse", targetNamespace = "http://ws/", className = "ws.ModificarTransporteResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarTransporteRequest", output = "http://ws/WebServiceFV/modificarTransporteResponse")
+    public boolean modificarTransporte(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar,
+        @WebParam(name = "capacidadcarga", targetNamespace = "")
+        int capacidadcarga,
+        @WebParam(name = "frigorificotrans", targetNamespace = "")
+        String frigorificotrans,
+        @WebParam(name = "permisocirculacion", targetNamespace = "")
+        String permisocirculacion);
 
     /**
      * 
@@ -987,5 +951,176 @@ public interface WebServiceFV {
     @ResponseWrapper(localName = "listarProductosxIdyNombreResponse", targetNamespace = "http://ws/", className = "ws.ListarProductosxIdyNombreResponse")
     @Action(input = "http://ws/WebServiceFV/listarProductosxIdyNombreRequest", output = "http://ws/WebServiceFV/listarProductosxIdyNombreResponse")
     public List<Producto> listarProductosxIdyNombre();
+
+    /**
+     * 
+     * @param subastaIdSubasta
+     * @param transportistaRut
+     * @param montosubasta
+     * @param pedidoIdpedido
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "crearNuevaOfertaEnSubasta", targetNamespace = "http://ws/", className = "ws.CrearNuevaOfertaEnSubasta")
+    @ResponseWrapper(localName = "crearNuevaOfertaEnSubastaResponse", targetNamespace = "http://ws/", className = "ws.CrearNuevaOfertaEnSubastaResponse")
+    @Action(input = "http://ws/WebServiceFV/crearNuevaOfertaEnSubastaRequest", output = "http://ws/WebServiceFV/crearNuevaOfertaEnSubastaResponse")
+    public Boolean crearNuevaOfertaEnSubasta(
+        @WebParam(name = "montosubasta", targetNamespace = "")
+        int montosubasta,
+        @WebParam(name = "subasta_id_subasta", targetNamespace = "")
+        String subastaIdSubasta,
+        @WebParam(name = "transportista_rut", targetNamespace = "")
+        int transportistaRut,
+        @WebParam(name = "pedido_idpedido", targetNamespace = "")
+        String pedidoIdpedido);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Region>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarRegionesPorIDPais", targetNamespace = "http://ws/", className = "ws.ListarRegionesPorIDPais")
+    @ResponseWrapper(localName = "listarRegionesPorIDPaisResponse", targetNamespace = "http://ws/", className = "ws.ListarRegionesPorIDPaisResponse")
+    @Action(input = "http://ws/WebServiceFV/listarRegionesPorIDPaisRequest", output = "http://ws/WebServiceFV/listarRegionesPorIDPaisResponse")
+    public List<Region> listarRegionesPorIDPais(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.ContratoClienteExterno>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarContratosCliEx", targetNamespace = "http://ws/", className = "ws.ListarContratosCliEx")
+    @ResponseWrapper(localName = "listarContratosCliExResponse", targetNamespace = "http://ws/", className = "ws.ListarContratosCliExResponse")
+    @Action(input = "http://ws/WebServiceFV/listarContratosCliExRequest", output = "http://ws/WebServiceFV/listarContratosCliExResponse")
+    public List<ContratoClienteExterno> listarContratosCliEx();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.ContratoTransporte>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarContratosTransporte", targetNamespace = "http://ws/", className = "ws.ListarContratosTransporte")
+    @ResponseWrapper(localName = "listarContratosTransporteResponse", targetNamespace = "http://ws/", className = "ws.ListarContratosTransporteResponse")
+    @Action(input = "http://ws/WebServiceFV/listarContratosTransporteRequest", output = "http://ws/WebServiceFV/listarContratosTransporteResponse")
+    public List<ContratoTransporte> listarContratosTransporte();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Pais>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarPais", targetNamespace = "http://ws/", className = "ws.ListarPais")
+    @ResponseWrapper(localName = "listarPaisResponse", targetNamespace = "http://ws/", className = "ws.ListarPaisResponse")
+    @Action(input = "http://ws/WebServiceFV/listarPaisRequest", output = "http://ws/WebServiceFV/listarPaisResponse")
+    public List<Pais> listarPais();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Comuna>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarComuna", targetNamespace = "http://ws/", className = "ws.ListarComuna")
+    @ResponseWrapper(localName = "listarComunaResponse", targetNamespace = "http://ws/", className = "ws.ListarComunaResponse")
+    @Action(input = "http://ws/WebServiceFV/listarComunaRequest", output = "http://ws/WebServiceFV/listarComunaResponse")
+    public List<Comuna> listarComuna(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Subasta>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarSubastas", targetNamespace = "http://ws/", className = "ws.ListarSubastas")
+    @ResponseWrapper(localName = "listarSubastasResponse", targetNamespace = "http://ws/", className = "ws.ListarSubastasResponse")
+    @Action(input = "http://ws/WebServiceFV/listarSubastasRequest", output = "http://ws/WebServiceFV/listarSubastasResponse")
+    public List<Subasta> listarSubastas();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Marca>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarMarcas", targetNamespace = "http://ws/", className = "ws.ListarMarcas")
+    @ResponseWrapper(localName = "listarMarcasResponse", targetNamespace = "http://ws/", className = "ws.ListarMarcasResponse")
+    @Action(input = "http://ws/WebServiceFV/listarMarcasRequest", output = "http://ws/WebServiceFV/listarMarcasResponse")
+    public List<Marca> listarMarcas();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Modelo>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarModelos", targetNamespace = "http://ws/", className = "ws.ListarModelos")
+    @ResponseWrapper(localName = "listarModelosResponse", targetNamespace = "http://ws/", className = "ws.ListarModelosResponse")
+    @Action(input = "http://ws/WebServiceFV/listarModelosRequest", output = "http://ws/WebServiceFV/listarModelosResponse")
+    public List<Modelo> listarModelos(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param precio
+     * @param img
+     * @param rutabuscar
+     * @param stock
+     * @param calibreIdcalibre
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "modificarProductosporRutProductor", targetNamespace = "http://ws/", className = "ws.ModificarProductosporRutProductor")
+    @ResponseWrapper(localName = "modificarProductosporRutProductorResponse", targetNamespace = "http://ws/", className = "ws.ModificarProductosporRutProductorResponse")
+    @Action(input = "http://ws/WebServiceFV/modificarProductosporRutProductorRequest", output = "http://ws/WebServiceFV/modificarProductosporRutProductorResponse")
+    public boolean modificarProductosporRutProductor(
+        @WebParam(name = "rutabuscar", targetNamespace = "")
+        int rutabuscar,
+        @WebParam(name = "precio", targetNamespace = "")
+        int precio,
+        @WebParam(name = "stock", targetNamespace = "")
+        int stock,
+        @WebParam(name = "calibre_idcalibre", targetNamespace = "")
+        String calibreIdcalibre,
+        @WebParam(name = "img", targetNamespace = "")
+        String img);
+
+    /**
+     * 
+     * @param identificadorabuscar
+     * @return
+     *     returns ws.Cliente
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarClienteEmpresaxidentificador", targetNamespace = "http://ws/", className = "ws.ListarClienteEmpresaxidentificador")
+    @ResponseWrapper(localName = "listarClienteEmpresaxidentificadorResponse", targetNamespace = "http://ws/", className = "ws.ListarClienteEmpresaxidentificadorResponse")
+    @Action(input = "http://ws/WebServiceFV/listarClienteEmpresaxidentificadorRequest", output = "http://ws/WebServiceFV/listarClienteEmpresaxidentificadorResponse")
+    public Cliente listarClienteEmpresaxidentificador(
+        @WebParam(name = "identificadorabuscar", targetNamespace = "")
+        String identificadorabuscar);
 
 }

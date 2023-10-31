@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="idproducto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="productor_rut" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="pedido_idpedido" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="calibre_idcalibre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,7 +35,8 @@ import javax.xml.bind.annotation.XmlType;
     "cantidad",
     "idproducto",
     "productorRut",
-    "pedidoIdpedido"
+    "pedidoIdpedido",
+    "calibreIdcalibre"
 })
 public class CrearNuevoDetallePedidoo {
 
@@ -44,6 +46,8 @@ public class CrearNuevoDetallePedidoo {
     protected int productorRut;
     @XmlElement(name = "pedido_idpedido")
     protected String pedidoIdpedido;
+    @XmlElement(name = "calibre_idcalibre")
+    protected String calibreIdcalibre;
 
     /**
      * Obtiene el valor de la propiedad cantidad.
@@ -123,6 +127,30 @@ public class CrearNuevoDetallePedidoo {
      */
     public void setPedidoIdpedido(String value) {
         this.pedidoIdpedido = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad calibreIdcalibre.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCalibreIdcalibre() {
+        return calibreIdcalibre;
+    }
+
+    /**
+     * Define el valor de la propiedad calibreIdcalibre.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCalibreIdcalibre(String value) {
+        this.calibreIdcalibre = value;
     }
 
 }

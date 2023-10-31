@@ -43,7 +43,10 @@ public class Clientet extends javax.swing.JFrame {
     public Clientet() {
         initComponents();
          WSFERIAVIRTUAL servicio = new WSFERIAVIRTUAL();
-        servicioWeb = servicio.getWebServiceFVPort();  
+        servicioWeb = servicio.getWebServiceFVPort(); 
+        
+        
+        carga_datos();
     }
 
     /**
@@ -87,7 +90,6 @@ public class Clientet extends javax.swing.JFrame {
         txtDV = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        btnActualizarTabla = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -172,13 +174,6 @@ public class Clientet extends javax.swing.JFrame {
 
         jLabel12.setText("-");
 
-        btnActualizarTabla.setText("actualizar");
-        btnActualizarTabla.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarTablaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -203,9 +198,9 @@ public class Clientet extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
                     .addComponent(lblNombre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtApellidoP, javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,13 +225,9 @@ public class Clientet extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel10)
                         .addGap(40, 40, 40))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnActualizarTabla)
-                .addGap(200, 200, 200))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,9 +236,7 @@ public class Clientet extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1)
-                .addGap(60, 60, 60)
-                .addComponent(btnActualizarTabla)
-                .addContainerGap())
+                .addGap(94, 94, 94))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel1)
@@ -390,6 +379,7 @@ public class Clientet extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error al agregar el cliente empresa a la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
         
         }
+        carga_datos();
     }
     }//GEN-LAST:event_btnAgregarActionPerformed
 
@@ -441,50 +431,14 @@ public class Clientet extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Error al modificar el cliente empresa. Inténtalo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
         }
         }
+        carga_datos();
     }
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-      String tipoCliente = (String) cmbTipoCliente.getSelectedItem();
-    if (tipoCliente.equals("Persona")) {
-        // elimina clientenormal
-        int rutEliminar = Integer.parseInt(txtRut.getText());
 
-        if (rutEliminar == 0) {
-            JOptionPane.showMessageDialog(this, "Por favor, ingresa un rut válido antes de intentar eliminar el cliente normal.", "Error", JOptionPane.ERROR_MESSAGE);
-        } else {
-            boolean eliminado = servicioWeb.eliminarDefinitivoClienteNormal(rutEliminar);
-
-            if (eliminado) {
-                JOptionPane.showMessageDialog(this, "Cliente normal eliminado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                limpiarCampos(); // Limpia los campos 
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al eliminar el cliente normal. Inténtalo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    } else if (tipoCliente.equals("Empresa")) {
-        // eliminar cliente emoresa
-        String identificadorEliminar = txtRut.getText(); // mismo campo para el identificador de empresa
-
-        if (identificadorEliminar.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, ingresa un identificador válido antes de intentar eliminar el cliente empresa.", "Error", JOptionPane.ERROR_MESSAGE);
-        } else {
-            boolean eliminado = servicioWeb.eliminarDefinitivoClienteEmpresa(identificadorEliminar);
-
-            if (eliminado) {
-                JOptionPane.showMessageDialog(this, "Cliente empresa eliminado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                limpiarCampos(); // Limpia los campos
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al eliminar el cliente empresa. Inténtalo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    
-        }
-    
-    
     }//GEN-LAST:event_btnEliminarActionPerformed
-
-    private void btnActualizarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarTablaActionPerformed
+public void carga_datos(){
      // Llama al método del servicio web para obtener la lista de consultores
      // Llama al método del servicio web para obtener la lista de clientes
     List<Cliente> clientes = servicioWeb.listarClientes();
@@ -505,8 +459,9 @@ public class Clientet extends javax.swing.JFrame {
     } else {
         // Si la lista de clientes está vacía o hay un error al obtener los datos, muestra un mensaje de error
         JOptionPane.showMessageDialog(this, "Error al obtener datos de clientes desde el servicio web.", "Error", JOptionPane.ERROR_MESSAGE);
-    }//GEN-LAST:event_btnActualizarTablaActionPerformed
-    }
+
+        }       
+   }    
     /**
      * @param args the command line arguments
      */
@@ -543,7 +498,6 @@ public class Clientet extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActualizarTabla;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnModificar;

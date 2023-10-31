@@ -4,221 +4,47 @@
 <xsd:import namespace="http://ws/" schemaLocation="http://localhost:8080/WEBSERVICEFERIAVIRTUAL/WSFERIAVIRTUAL?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="listarlogin2">
+<part name="parameters" element="tns:listarlogin2"/>
+</message>
+<message name="listarlogin2Response">
+<part name="parameters" element="tns:listarlogin2Response"/>
+</message>
+<message name="eliminarAdmin">
+<part name="parameters" element="tns:eliminarAdmin"/>
+</message>
+<message name="eliminarAdminResponse">
+<part name="parameters" element="tns:eliminarAdminResponse"/>
+</message>
+<message name="listarProductos">
+<part name="parameters" element="tns:listarProductos"/>
+</message>
+<message name="listarProductosResponse">
+<part name="parameters" element="tns:listarProductosResponse"/>
+</message>
+<message name="agregarProductor">
+<part name="parameters" element="tns:agregarProductor"/>
+</message>
+<message name="agregarProductorResponse">
+<part name="parameters" element="tns:agregarProductorResponse"/>
+</message>
+<message name="agregarConsultor">
+<part name="parameters" element="tns:agregarConsultor"/>
+</message>
+<message name="agregarConsultorResponse">
+<part name="parameters" element="tns:agregarConsultorResponse"/>
+</message>
 <message name="listarCalibre">
 <part name="parameters" element="tns:listarCalibre"/>
 </message>
 <message name="listarCalibreResponse">
 <part name="parameters" element="tns:listarCalibreResponse"/>
 </message>
-<message name="listarClienteEmpresaxidentificador">
-<part name="parameters" element="tns:listarClienteEmpresaxidentificador"/>
-</message>
-<message name="listarClienteEmpresaxidentificadorResponse">
-<part name="parameters" element="tns:listarClienteEmpresaxidentificadorResponse"/>
-</message>
-<message name="modificarProductosporRutProductor">
-<part name="parameters" element="tns:modificarProductosporRutProductor"/>
-</message>
-<message name="modificarProductosporRutProductorResponse">
-<part name="parameters" element="tns:modificarProductosporRutProductorResponse"/>
-</message>
-<message name="modificarAdministrador">
-<part name="parameters" element="tns:modificarAdministrador"/>
-</message>
-<message name="modificarAdministradorResponse">
-<part name="parameters" element="tns:modificarAdministradorResponse"/>
-</message>
-<message name="modificarConsultor">
-<part name="parameters" element="tns:modificarConsultor"/>
-</message>
-<message name="modificarConsultorResponse">
-<part name="parameters" element="tns:modificarConsultorResponse"/>
-</message>
-<message name="listarAdminpornombre">
-<part name="parameters" element="tns:listarAdminpornombre"/>
-</message>
-<message name="listarAdminpornombreResponse">
-<part name="parameters" element="tns:listarAdminpornombreResponse"/>
-</message>
-<message name="desactivarCuentaProductor">
-<part name="parameters" element="tns:desactivarCuentaProductor"/>
-</message>
-<message name="desactivarCuentaProductorResponse">
-<part name="parameters" element="tns:desactivarCuentaProductorResponse"/>
-</message>
-<message name="eliminarDefinitivoTransportista">
-<part name="parameters" element="tns:eliminarDefinitivoTransportista"/>
-</message>
-<message name="eliminarDefinitivoTransportistaResponse">
-<part name="parameters" element="tns:eliminarDefinitivoTransportistaResponse"/>
-</message>
-<message name="desactivarCuentaTransportista">
-<part name="parameters" element="tns:desactivarCuentaTransportista"/>
-</message>
-<message name="desactivarCuentaTransportistaResponse">
-<part name="parameters" element="tns:desactivarCuentaTransportistaResponse"/>
-</message>
-<message name="listarClienteNormalxRut">
-<part name="parameters" element="tns:listarClienteNormalxRut"/>
-</message>
-<message name="listarClienteNormalxRutResponse">
-<part name="parameters" element="tns:listarClienteNormalxRutResponse"/>
-</message>
-<message name="agregarClienteNormal">
-<part name="parameters" element="tns:agregarClienteNormal"/>
-</message>
-<message name="agregarClienteNormalResponse">
-<part name="parameters" element="tns:agregarClienteNormalResponse"/>
-</message>
-<message name="listarTransportista">
-<part name="parameters" element="tns:listarTransportista"/>
-</message>
-<message name="listarTransportistaResponse">
-<part name="parameters" element="tns:listarTransportistaResponse"/>
-</message>
-<message name="desactivarCuentaClienteEmpresa">
-<part name="parameters" element="tns:desactivarCuentaClienteEmpresa"/>
-</message>
-<message name="desactivarCuentaClienteEmpresaResponse">
-<part name="parameters" element="tns:desactivarCuentaClienteEmpresaResponse"/>
-</message>
-<message name="agregarTransportista">
-<part name="parameters" element="tns:agregarTransportista"/>
-</message>
-<message name="agregarTransportistaResponse">
-<part name="parameters" element="tns:agregarTransportistaResponse"/>
-</message>
-<message name="desactivarCuentaClienteNormal">
-<part name="parameters" element="tns:desactivarCuentaClienteNormal"/>
-</message>
-<message name="desactivarCuentaClienteNormalResponse">
-<part name="parameters" element="tns:desactivarCuentaClienteNormalResponse"/>
-</message>
-<message name="listarproductosporrutproductor">
-<part name="parameters" element="tns:listarproductosporrutproductor"/>
-</message>
-<message name="listarproductosporrutproductorResponse">
-<part name="parameters" element="tns:listarproductosporrutproductorResponse"/>
-</message>
-<message name="eliminarDefinitivoProductor">
-<part name="parameters" element="tns:eliminarDefinitivoProductor"/>
-</message>
-<message name="eliminarDefinitivoProductorResponse">
-<part name="parameters" element="tns:eliminarDefinitivoProductorResponse"/>
-</message>
-<message name="agregarAdministrador">
-<part name="parameters" element="tns:agregarAdministrador"/>
-</message>
-<message name="agregarAdministradorResponse">
-<part name="parameters" element="tns:agregarAdministradorResponse"/>
-</message>
-<message name="listarproductorporrut">
-<part name="parameters" element="tns:listarproductorporrut"/>
-</message>
-<message name="listarproductorporrutResponse">
-<part name="parameters" element="tns:listarproductorporrutResponse"/>
-</message>
-<message name="modificarClienteEmpresa">
-<part name="parameters" element="tns:modificarClienteEmpresa"/>
-</message>
-<message name="modificarClienteEmpresaResponse">
-<part name="parameters" element="tns:modificarClienteEmpresaResponse"/>
-</message>
-<message name="eliminarConsultor">
-<part name="parameters" element="tns:eliminarConsultor"/>
-</message>
-<message name="eliminarConsultorResponse">
-<part name="parameters" element="tns:eliminarConsultorResponse"/>
-</message>
-<message name="agregarClienteEmp">
-<part name="parameters" element="tns:agregarClienteEmp"/>
-</message>
-<message name="agregarClienteEmpResponse">
-<part name="parameters" element="tns:agregarClienteEmpResponse"/>
-</message>
-<message name="eliminarDefinitivoClienteEmpresa">
-<part name="parameters" element="tns:eliminarDefinitivoClienteEmpresa"/>
-</message>
-<message name="eliminarDefinitivoClienteEmpresaResponse">
-<part name="parameters" element="tns:eliminarDefinitivoClienteEmpresaResponse"/>
-</message>
-<message name="listartransportistaporrut">
-<part name="parameters" element="tns:listartransportistaporrut"/>
-</message>
-<message name="listartransportistaporrutResponse">
-<part name="parameters" element="tns:listartransportistaporrutResponse"/>
-</message>
-<message name="agregarNuevoProducto">
-<part name="parameters" element="tns:agregarNuevoProducto"/>
-</message>
-<message name="agregarNuevoProductoResponse">
-<part name="parameters" element="tns:agregarNuevoProductoResponse"/>
-</message>
-<message name="eliminarProductoDelProductor">
-<part name="parameters" element="tns:eliminarProductoDelProductor"/>
-</message>
-<message name="eliminarProductoDelProductorResponse">
-<part name="parameters" element="tns:eliminarProductoDelProductorResponse"/>
-</message>
-<message name="modificarProductor">
-<part name="parameters" element="tns:modificarProductor"/>
-</message>
-<message name="modificarProductorResponse">
-<part name="parameters" element="tns:modificarProductorResponse"/>
-</message>
-<message name="modificarClientenormal">
-<part name="parameters" element="tns:modificarClientenormal"/>
-</message>
-<message name="modificarClientenormalResponse">
-<part name="parameters" element="tns:modificarClientenormalResponse"/>
-</message>
-<message name="modificarTransportista">
-<part name="parameters" element="tns:modificarTransportista"/>
-</message>
-<message name="modificarTransportistaResponse">
-<part name="parameters" element="tns:modificarTransportistaResponse"/>
-</message>
-<message name="agregarTransporte">
-<part name="parameters" element="tns:agregarTransporte"/>
-</message>
-<message name="agregarTransporteResponse">
-<part name="parameters" element="tns:agregarTransporteResponse"/>
-</message>
-<message name="listarTransportexRut">
-<part name="parameters" element="tns:listarTransportexRut"/>
-</message>
-<message name="listarTransportexRutResponse">
-<part name="parameters" element="tns:listarTransportexRutResponse"/>
-</message>
-<message name="eliminarDefinitivoClienteNormal">
-<part name="parameters" element="tns:eliminarDefinitivoClienteNormal"/>
-</message>
-<message name="eliminarDefinitivoClienteNormalResponse">
-<part name="parameters" element="tns:eliminarDefinitivoClienteNormalResponse"/>
-</message>
-<message name="crearNuevoDetallePedidoo">
-<part name="parameters" element="tns:crearNuevoDetallePedidoo"/>
-</message>
-<message name="crearNuevoDetallePedidooResponse">
-<part name="parameters" element="tns:crearNuevoDetallePedidooResponse"/>
-</message>
-<message name="eliminarTransportexPatente">
-<part name="parameters" element="tns:eliminarTransportexPatente"/>
-</message>
-<message name="eliminarTransportexPatenteResponse">
-<part name="parameters" element="tns:eliminarTransportexPatenteResponse"/>
-</message>
-<message name="listarconsultorporpornombre">
-<part name="parameters" element="tns:listarconsultorporpornombre"/>
-</message>
-<message name="listarconsultorporpornombreResponse">
-<part name="parameters" element="tns:listarconsultorporpornombreResponse"/>
-</message>
-<message name="modificarTransporte">
-<part name="parameters" element="tns:modificarTransporte"/>
-</message>
-<message name="modificarTransporteResponse">
-<part name="parameters" element="tns:modificarTransporteResponse"/>
+<message name="listarProductor">
+<part name="parameters" element="tns:listarProductor"/>
+</message>
+<message name="listarProductorResponse">
+<part name="parameters" element="tns:listarProductorResponse"/>
 </message>
 <message name="listarAdmin">
 <part name="parameters" element="tns:listarAdmin"/>
@@ -226,11 +52,11 @@
 <message name="listarAdminResponse">
 <part name="parameters" element="tns:listarAdminResponse"/>
 </message>
-<message name="listarProductor">
-<part name="parameters" element="tns:listarProductor"/>
+<message name="crearNuevoPedido">
+<part name="parameters" element="tns:crearNuevoPedido"/>
 </message>
-<message name="listarProductorResponse">
-<part name="parameters" element="tns:listarProductorResponse"/>
+<message name="crearNuevoPedidoResponse">
+<part name="parameters" element="tns:crearNuevoPedidoResponse"/>
 </message>
 <message name="listarClientes">
 <part name="parameters" element="tns:listarClientes"/>
@@ -250,41 +76,203 @@
 <message name="listarlogin1Response">
 <part name="parameters" element="tns:listarlogin1Response"/>
 </message>
-<message name="listarProductos">
-<part name="parameters" element="tns:listarProductos"/>
+<message name="modificarProductor">
+<part name="parameters" element="tns:modificarProductor"/>
 </message>
-<message name="listarProductosResponse">
-<part name="parameters" element="tns:listarProductosResponse"/>
+<message name="modificarProductorResponse">
+<part name="parameters" element="tns:modificarProductorResponse"/>
 </message>
-<message name="listarlogin2">
-<part name="parameters" element="tns:listarlogin2"/>
+<message name="listarproductorporrut">
+<part name="parameters" element="tns:listarproductorporrut"/>
 </message>
-<message name="listarlogin2Response">
-<part name="parameters" element="tns:listarlogin2Response"/>
+<message name="listarproductorporrutResponse">
+<part name="parameters" element="tns:listarproductorporrutResponse"/>
 </message>
-<message name="agregarProductor">
-<part name="parameters" element="tns:agregarProductor"/>
+<message name="agregarClienteNormal">
+<part name="parameters" element="tns:agregarClienteNormal"/>
 </message>
-<message name="agregarProductorResponse">
-<part name="parameters" element="tns:agregarProductorResponse"/>
+<message name="agregarClienteNormalResponse">
+<part name="parameters" element="tns:agregarClienteNormalResponse"/>
 </message>
-<message name="agregarConsultor">
-<part name="parameters" element="tns:agregarConsultor"/>
+<message name="modificarTransportista">
+<part name="parameters" element="tns:modificarTransportista"/>
 </message>
-<message name="agregarConsultorResponse">
-<part name="parameters" element="tns:agregarConsultorResponse"/>
+<message name="modificarTransportistaResponse">
+<part name="parameters" element="tns:modificarTransportistaResponse"/>
 </message>
-<message name="eliminarAdmin">
-<part name="parameters" element="tns:eliminarAdmin"/>
+<message name="modificarClienteEmpresa">
+<part name="parameters" element="tns:modificarClienteEmpresa"/>
 </message>
-<message name="eliminarAdminResponse">
-<part name="parameters" element="tns:eliminarAdminResponse"/>
+<message name="modificarClienteEmpresaResponse">
+<part name="parameters" element="tns:modificarClienteEmpresaResponse"/>
 </message>
-<message name="crearNuevoPedido">
-<part name="parameters" element="tns:crearNuevoPedido"/>
+<message name="modificarAdministrador">
+<part name="parameters" element="tns:modificarAdministrador"/>
 </message>
-<message name="crearNuevoPedidoResponse">
-<part name="parameters" element="tns:crearNuevoPedidoResponse"/>
+<message name="modificarAdministradorResponse">
+<part name="parameters" element="tns:modificarAdministradorResponse"/>
+</message>
+<message name="eliminarDefinitivoProductor">
+<part name="parameters" element="tns:eliminarDefinitivoProductor"/>
+</message>
+<message name="eliminarDefinitivoProductorResponse">
+<part name="parameters" element="tns:eliminarDefinitivoProductorResponse"/>
+</message>
+<message name="desactivarCuentaProductor">
+<part name="parameters" element="tns:desactivarCuentaProductor"/>
+</message>
+<message name="desactivarCuentaProductorResponse">
+<part name="parameters" element="tns:desactivarCuentaProductorResponse"/>
+</message>
+<message name="eliminarConsultor">
+<part name="parameters" element="tns:eliminarConsultor"/>
+</message>
+<message name="eliminarConsultorResponse">
+<part name="parameters" element="tns:eliminarConsultorResponse"/>
+</message>
+<message name="modificarClientenormal">
+<part name="parameters" element="tns:modificarClientenormal"/>
+</message>
+<message name="modificarClientenormalResponse">
+<part name="parameters" element="tns:modificarClientenormalResponse"/>
+</message>
+<message name="eliminarDefinitivoClienteNormal">
+<part name="parameters" element="tns:eliminarDefinitivoClienteNormal"/>
+</message>
+<message name="eliminarDefinitivoClienteNormalResponse">
+<part name="parameters" element="tns:eliminarDefinitivoClienteNormalResponse"/>
+</message>
+<message name="listarClienteNormalxRut">
+<part name="parameters" element="tns:listarClienteNormalxRut"/>
+</message>
+<message name="listarClienteNormalxRutResponse">
+<part name="parameters" element="tns:listarClienteNormalxRutResponse"/>
+</message>
+<message name="desactivarCuentaClienteNormal">
+<part name="parameters" element="tns:desactivarCuentaClienteNormal"/>
+</message>
+<message name="desactivarCuentaClienteNormalResponse">
+<part name="parameters" element="tns:desactivarCuentaClienteNormalResponse"/>
+</message>
+<message name="agregarClienteEmp">
+<part name="parameters" element="tns:agregarClienteEmp"/>
+</message>
+<message name="agregarClienteEmpResponse">
+<part name="parameters" element="tns:agregarClienteEmpResponse"/>
+</message>
+<message name="eliminarDefinitivoClienteEmpresa">
+<part name="parameters" element="tns:eliminarDefinitivoClienteEmpresa"/>
+</message>
+<message name="eliminarDefinitivoClienteEmpresaResponse">
+<part name="parameters" element="tns:eliminarDefinitivoClienteEmpresaResponse"/>
+</message>
+<message name="agregarTransportista">
+<part name="parameters" element="tns:agregarTransportista"/>
+</message>
+<message name="agregarTransportistaResponse">
+<part name="parameters" element="tns:agregarTransportistaResponse"/>
+</message>
+<message name="listarTransportista">
+<part name="parameters" element="tns:listarTransportista"/>
+</message>
+<message name="listarTransportistaResponse">
+<part name="parameters" element="tns:listarTransportistaResponse"/>
+</message>
+<message name="agregarAdministrador">
+<part name="parameters" element="tns:agregarAdministrador"/>
+</message>
+<message name="agregarAdministradorResponse">
+<part name="parameters" element="tns:agregarAdministradorResponse"/>
+</message>
+<message name="listarAdminpornombre">
+<part name="parameters" element="tns:listarAdminpornombre"/>
+</message>
+<message name="listarAdminpornombreResponse">
+<part name="parameters" element="tns:listarAdminpornombreResponse"/>
+</message>
+<message name="desactivarCuentaClienteEmpresa">
+<part name="parameters" element="tns:desactivarCuentaClienteEmpresa"/>
+</message>
+<message name="desactivarCuentaClienteEmpresaResponse">
+<part name="parameters" element="tns:desactivarCuentaClienteEmpresaResponse"/>
+</message>
+<message name="modificarConsultor">
+<part name="parameters" element="tns:modificarConsultor"/>
+</message>
+<message name="modificarConsultorResponse">
+<part name="parameters" element="tns:modificarConsultorResponse"/>
+</message>
+<message name="listarconsultorporpornombre">
+<part name="parameters" element="tns:listarconsultorporpornombre"/>
+</message>
+<message name="listarconsultorporpornombreResponse">
+<part name="parameters" element="tns:listarconsultorporpornombreResponse"/>
+</message>
+<message name="listarproductosporrutproductor">
+<part name="parameters" element="tns:listarproductosporrutproductor"/>
+</message>
+<message name="listarproductosporrutproductorResponse">
+<part name="parameters" element="tns:listarproductosporrutproductorResponse"/>
+</message>
+<message name="eliminarProductoDelProductor">
+<part name="parameters" element="tns:eliminarProductoDelProductor"/>
+</message>
+<message name="eliminarProductoDelProductorResponse">
+<part name="parameters" element="tns:eliminarProductoDelProductorResponse"/>
+</message>
+<message name="crearNuevoDetallePedidoo">
+<part name="parameters" element="tns:crearNuevoDetallePedidoo"/>
+</message>
+<message name="crearNuevoDetallePedidooResponse">
+<part name="parameters" element="tns:crearNuevoDetallePedidooResponse"/>
+</message>
+<message name="agregarNuevoProducto">
+<part name="parameters" element="tns:agregarNuevoProducto"/>
+</message>
+<message name="agregarNuevoProductoResponse">
+<part name="parameters" element="tns:agregarNuevoProductoResponse"/>
+</message>
+<message name="eliminarDefinitivoTransportista">
+<part name="parameters" element="tns:eliminarDefinitivoTransportista"/>
+</message>
+<message name="eliminarDefinitivoTransportistaResponse">
+<part name="parameters" element="tns:eliminarDefinitivoTransportistaResponse"/>
+</message>
+<message name="agregarTransporte">
+<part name="parameters" element="tns:agregarTransporte"/>
+</message>
+<message name="agregarTransporteResponse">
+<part name="parameters" element="tns:agregarTransporteResponse"/>
+</message>
+<message name="eliminarTransportexPatente">
+<part name="parameters" element="tns:eliminarTransportexPatente"/>
+</message>
+<message name="eliminarTransportexPatenteResponse">
+<part name="parameters" element="tns:eliminarTransportexPatenteResponse"/>
+</message>
+<message name="desactivarCuentaTransportista">
+<part name="parameters" element="tns:desactivarCuentaTransportista"/>
+</message>
+<message name="desactivarCuentaTransportistaResponse">
+<part name="parameters" element="tns:desactivarCuentaTransportistaResponse"/>
+</message>
+<message name="listartransportistaporrut">
+<part name="parameters" element="tns:listartransportistaporrut"/>
+</message>
+<message name="listartransportistaporrutResponse">
+<part name="parameters" element="tns:listartransportistaporrutResponse"/>
+</message>
+<message name="listarTransportexRut">
+<part name="parameters" element="tns:listarTransportexRut"/>
+</message>
+<message name="listarTransportexRutResponse">
+<part name="parameters" element="tns:listarTransportexRutResponse"/>
+</message>
+<message name="modificarTransporte">
+<part name="parameters" element="tns:modificarTransporte"/>
+</message>
+<message name="modificarTransporteResponse">
+<part name="parameters" element="tns:modificarTransporteResponse"/>
 </message>
 <message name="listarProductosxIdyNombre">
 <part name="parameters" element="tns:listarProductosxIdyNombre"/>
@@ -292,158 +280,108 @@
 <message name="listarProductosxIdyNombreResponse">
 <part name="parameters" element="tns:listarProductosxIdyNombreResponse"/>
 </message>
+<message name="crearNuevaOfertaEnSubasta">
+<part name="parameters" element="tns:crearNuevaOfertaEnSubasta"/>
+</message>
+<message name="crearNuevaOfertaEnSubastaResponse">
+<part name="parameters" element="tns:crearNuevaOfertaEnSubastaResponse"/>
+</message>
+<message name="listarRegionesPorIDPais">
+<part name="parameters" element="tns:listarRegionesPorIDPais"/>
+</message>
+<message name="listarRegionesPorIDPaisResponse">
+<part name="parameters" element="tns:listarRegionesPorIDPaisResponse"/>
+</message>
+<message name="listarContratosCliEx">
+<part name="parameters" element="tns:listarContratosCliEx"/>
+</message>
+<message name="listarContratosCliExResponse">
+<part name="parameters" element="tns:listarContratosCliExResponse"/>
+</message>
+<message name="listarContratosTransporte">
+<part name="parameters" element="tns:listarContratosTransporte"/>
+</message>
+<message name="listarContratosTransporteResponse">
+<part name="parameters" element="tns:listarContratosTransporteResponse"/>
+</message>
+<message name="listarPais">
+<part name="parameters" element="tns:listarPais"/>
+</message>
+<message name="listarPaisResponse">
+<part name="parameters" element="tns:listarPaisResponse"/>
+</message>
+<message name="listarComuna">
+<part name="parameters" element="tns:listarComuna"/>
+</message>
+<message name="listarComunaResponse">
+<part name="parameters" element="tns:listarComunaResponse"/>
+</message>
+<message name="listarSubastas">
+<part name="parameters" element="tns:listarSubastas"/>
+</message>
+<message name="listarSubastasResponse">
+<part name="parameters" element="tns:listarSubastasResponse"/>
+</message>
+<message name="listarMarcas">
+<part name="parameters" element="tns:listarMarcas"/>
+</message>
+<message name="listarMarcasResponse">
+<part name="parameters" element="tns:listarMarcasResponse"/>
+</message>
+<message name="listarModelos">
+<part name="parameters" element="tns:listarModelos"/>
+</message>
+<message name="listarModelosResponse">
+<part name="parameters" element="tns:listarModelosResponse"/>
+</message>
+<message name="modificarProductosporRutProductor">
+<part name="parameters" element="tns:modificarProductosporRutProductor"/>
+</message>
+<message name="modificarProductosporRutProductorResponse">
+<part name="parameters" element="tns:modificarProductosporRutProductorResponse"/>
+</message>
+<message name="listarClienteEmpresaxidentificador">
+<part name="parameters" element="tns:listarClienteEmpresaxidentificador"/>
+</message>
+<message name="listarClienteEmpresaxidentificadorResponse">
+<part name="parameters" element="tns:listarClienteEmpresaxidentificadorResponse"/>
+</message>
 <portType name="WebServiceFV">
+<operation name="listarlogin2">
+<input wsam:Action="http://ws/WebServiceFV/listarlogin2Request" message="tns:listarlogin2"/>
+<output wsam:Action="http://ws/WebServiceFV/listarlogin2Response" message="tns:listarlogin2Response"/>
+</operation>
+<operation name="eliminarAdmin">
+<input wsam:Action="http://ws/WebServiceFV/eliminarAdminRequest" message="tns:eliminarAdmin"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarAdminResponse" message="tns:eliminarAdminResponse"/>
+</operation>
+<operation name="listarProductos">
+<input wsam:Action="http://ws/WebServiceFV/listarProductosRequest" message="tns:listarProductos"/>
+<output wsam:Action="http://ws/WebServiceFV/listarProductosResponse" message="tns:listarProductosResponse"/>
+</operation>
+<operation name="agregarProductor">
+<input wsam:Action="http://ws/WebServiceFV/agregarProductorRequest" message="tns:agregarProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarProductorResponse" message="tns:agregarProductorResponse"/>
+</operation>
+<operation name="agregarConsultor">
+<input wsam:Action="http://ws/WebServiceFV/agregarConsultorRequest" message="tns:agregarConsultor"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarConsultorResponse" message="tns:agregarConsultorResponse"/>
+</operation>
 <operation name="listarCalibre">
 <input wsam:Action="http://ws/WebServiceFV/listarCalibreRequest" message="tns:listarCalibre"/>
 <output wsam:Action="http://ws/WebServiceFV/listarCalibreResponse" message="tns:listarCalibreResponse"/>
 </operation>
-<operation name="listarClienteEmpresaxidentificador">
-<input wsam:Action="http://ws/WebServiceFV/listarClienteEmpresaxidentificadorRequest" message="tns:listarClienteEmpresaxidentificador"/>
-<output wsam:Action="http://ws/WebServiceFV/listarClienteEmpresaxidentificadorResponse" message="tns:listarClienteEmpresaxidentificadorResponse"/>
-</operation>
-<operation name="modificarProductosporRutProductor">
-<input wsam:Action="http://ws/WebServiceFV/modificarProductosporRutProductorRequest" message="tns:modificarProductosporRutProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarProductosporRutProductorResponse" message="tns:modificarProductosporRutProductorResponse"/>
-</operation>
-<operation name="modificarAdministrador">
-<input wsam:Action="http://ws/WebServiceFV/modificarAdministradorRequest" message="tns:modificarAdministrador"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarAdministradorResponse" message="tns:modificarAdministradorResponse"/>
-</operation>
-<operation name="modificarConsultor">
-<input wsam:Action="http://ws/WebServiceFV/modificarConsultorRequest" message="tns:modificarConsultor"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarConsultorResponse" message="tns:modificarConsultorResponse"/>
-</operation>
-<operation name="listarAdminpornombre">
-<input wsam:Action="http://ws/WebServiceFV/listarAdminpornombreRequest" message="tns:listarAdminpornombre"/>
-<output wsam:Action="http://ws/WebServiceFV/listarAdminpornombreResponse" message="tns:listarAdminpornombreResponse"/>
-</operation>
-<operation name="desactivarCuentaProductor">
-<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaProductorRequest" message="tns:desactivarCuentaProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaProductorResponse" message="tns:desactivarCuentaProductorResponse"/>
-</operation>
-<operation name="eliminarDefinitivoTransportista">
-<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoTransportistaRequest" message="tns:eliminarDefinitivoTransportista"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoTransportistaResponse" message="tns:eliminarDefinitivoTransportistaResponse"/>
-</operation>
-<operation name="desactivarCuentaTransportista">
-<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaTransportistaRequest" message="tns:desactivarCuentaTransportista"/>
-<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaTransportistaResponse" message="tns:desactivarCuentaTransportistaResponse"/>
-</operation>
-<operation name="listarClienteNormalxRut">
-<input wsam:Action="http://ws/WebServiceFV/listarClienteNormalxRutRequest" message="tns:listarClienteNormalxRut"/>
-<output wsam:Action="http://ws/WebServiceFV/listarClienteNormalxRutResponse" message="tns:listarClienteNormalxRutResponse"/>
-</operation>
-<operation name="agregarClienteNormal">
-<input wsam:Action="http://ws/WebServiceFV/agregarClienteNormalRequest" message="tns:agregarClienteNormal"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarClienteNormalResponse" message="tns:agregarClienteNormalResponse"/>
-</operation>
-<operation name="listarTransportista">
-<input wsam:Action="http://ws/WebServiceFV/listarTransportistaRequest" message="tns:listarTransportista"/>
-<output wsam:Action="http://ws/WebServiceFV/listarTransportistaResponse" message="tns:listarTransportistaResponse"/>
-</operation>
-<operation name="desactivarCuentaClienteEmpresa">
-<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteEmpresaRequest" message="tns:desactivarCuentaClienteEmpresa"/>
-<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteEmpresaResponse" message="tns:desactivarCuentaClienteEmpresaResponse"/>
-</operation>
-<operation name="agregarTransportista">
-<input wsam:Action="http://ws/WebServiceFV/agregarTransportistaRequest" message="tns:agregarTransportista"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarTransportistaResponse" message="tns:agregarTransportistaResponse"/>
-</operation>
-<operation name="desactivarCuentaClienteNormal">
-<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteNormalRequest" message="tns:desactivarCuentaClienteNormal"/>
-<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteNormalResponse" message="tns:desactivarCuentaClienteNormalResponse"/>
-</operation>
-<operation name="listarproductosporrutproductor">
-<input wsam:Action="http://ws/WebServiceFV/listarproductosporrutproductorRequest" message="tns:listarproductosporrutproductor"/>
-<output wsam:Action="http://ws/WebServiceFV/listarproductosporrutproductorResponse" message="tns:listarproductosporrutproductorResponse"/>
-</operation>
-<operation name="eliminarDefinitivoProductor">
-<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoProductorRequest" message="tns:eliminarDefinitivoProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoProductorResponse" message="tns:eliminarDefinitivoProductorResponse"/>
-</operation>
-<operation name="agregarAdministrador">
-<input wsam:Action="http://ws/WebServiceFV/agregarAdministradorRequest" message="tns:agregarAdministrador"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarAdministradorResponse" message="tns:agregarAdministradorResponse"/>
-</operation>
-<operation name="listarproductorporrut">
-<input wsam:Action="http://ws/WebServiceFV/listarproductorporrutRequest" message="tns:listarproductorporrut"/>
-<output wsam:Action="http://ws/WebServiceFV/listarproductorporrutResponse" message="tns:listarproductorporrutResponse"/>
-</operation>
-<operation name="modificarClienteEmpresa">
-<input wsam:Action="http://ws/WebServiceFV/modificarClienteEmpresaRequest" message="tns:modificarClienteEmpresa"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarClienteEmpresaResponse" message="tns:modificarClienteEmpresaResponse"/>
-</operation>
-<operation name="eliminarConsultor">
-<input wsam:Action="http://ws/WebServiceFV/eliminarConsultorRequest" message="tns:eliminarConsultor"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarConsultorResponse" message="tns:eliminarConsultorResponse"/>
-</operation>
-<operation name="agregarClienteEmp">
-<input wsam:Action="http://ws/WebServiceFV/agregarClienteEmpRequest" message="tns:agregarClienteEmp"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarClienteEmpResponse" message="tns:agregarClienteEmpResponse"/>
-</operation>
-<operation name="eliminarDefinitivoClienteEmpresa">
-<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaRequest" message="tns:eliminarDefinitivoClienteEmpresa"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaResponse" message="tns:eliminarDefinitivoClienteEmpresaResponse"/>
-</operation>
-<operation name="listartransportistaporrut">
-<input wsam:Action="http://ws/WebServiceFV/listartransportistaporrutRequest" message="tns:listartransportistaporrut"/>
-<output wsam:Action="http://ws/WebServiceFV/listartransportistaporrutResponse" message="tns:listartransportistaporrutResponse"/>
-</operation>
-<operation name="agregarNuevoProducto">
-<input wsam:Action="http://ws/WebServiceFV/agregarNuevoProductoRequest" message="tns:agregarNuevoProducto"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarNuevoProductoResponse" message="tns:agregarNuevoProductoResponse"/>
-</operation>
-<operation name="eliminarProductoDelProductor">
-<input wsam:Action="http://ws/WebServiceFV/eliminarProductoDelProductorRequest" message="tns:eliminarProductoDelProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarProductoDelProductorResponse" message="tns:eliminarProductoDelProductorResponse"/>
-</operation>
-<operation name="modificarProductor">
-<input wsam:Action="http://ws/WebServiceFV/modificarProductorRequest" message="tns:modificarProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarProductorResponse" message="tns:modificarProductorResponse"/>
-</operation>
-<operation name="modificarClientenormal">
-<input wsam:Action="http://ws/WebServiceFV/modificarClientenormalRequest" message="tns:modificarClientenormal"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarClientenormalResponse" message="tns:modificarClientenormalResponse"/>
-</operation>
-<operation name="modificarTransportista">
-<input wsam:Action="http://ws/WebServiceFV/modificarTransportistaRequest" message="tns:modificarTransportista"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarTransportistaResponse" message="tns:modificarTransportistaResponse"/>
-</operation>
-<operation name="agregarTransporte">
-<input wsam:Action="http://ws/WebServiceFV/agregarTransporteRequest" message="tns:agregarTransporte"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarTransporteResponse" message="tns:agregarTransporteResponse"/>
-</operation>
-<operation name="listarTransportexRut">
-<input wsam:Action="http://ws/WebServiceFV/listarTransportexRutRequest" message="tns:listarTransportexRut"/>
-<output wsam:Action="http://ws/WebServiceFV/listarTransportexRutResponse" message="tns:listarTransportexRutResponse"/>
-</operation>
-<operation name="eliminarDefinitivoClienteNormal">
-<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteNormalRequest" message="tns:eliminarDefinitivoClienteNormal"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteNormalResponse" message="tns:eliminarDefinitivoClienteNormalResponse"/>
-</operation>
-<operation name="crearNuevoDetallePedidoo">
-<input wsam:Action="http://ws/WebServiceFV/crearNuevoDetallePedidooRequest" message="tns:crearNuevoDetallePedidoo"/>
-<output wsam:Action="http://ws/WebServiceFV/crearNuevoDetallePedidooResponse" message="tns:crearNuevoDetallePedidooResponse"/>
-</operation>
-<operation name="eliminarTransportexPatente">
-<input wsam:Action="http://ws/WebServiceFV/eliminarTransportexPatenteRequest" message="tns:eliminarTransportexPatente"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarTransportexPatenteResponse" message="tns:eliminarTransportexPatenteResponse"/>
-</operation>
-<operation name="listarconsultorporpornombre">
-<input wsam:Action="http://ws/WebServiceFV/listarconsultorporpornombreRequest" message="tns:listarconsultorporpornombre"/>
-<output wsam:Action="http://ws/WebServiceFV/listarconsultorporpornombreResponse" message="tns:listarconsultorporpornombreResponse"/>
-</operation>
-<operation name="modificarTransporte">
-<input wsam:Action="http://ws/WebServiceFV/modificarTransporteRequest" message="tns:modificarTransporte"/>
-<output wsam:Action="http://ws/WebServiceFV/modificarTransporteResponse" message="tns:modificarTransporteResponse"/>
+<operation name="listarProductor">
+<input wsam:Action="http://ws/WebServiceFV/listarProductorRequest" message="tns:listarProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/listarProductorResponse" message="tns:listarProductorResponse"/>
 </operation>
 <operation name="listarAdmin">
 <input wsam:Action="http://ws/WebServiceFV/listarAdminRequest" message="tns:listarAdmin"/>
 <output wsam:Action="http://ws/WebServiceFV/listarAdminResponse" message="tns:listarAdminResponse"/>
 </operation>
-<operation name="listarProductor">
-<input wsam:Action="http://ws/WebServiceFV/listarProductorRequest" message="tns:listarProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/listarProductorResponse" message="tns:listarProductorResponse"/>
+<operation name="crearNuevoPedido">
+<input wsam:Action="http://ws/WebServiceFV/crearNuevoPedidoRequest" message="tns:crearNuevoPedido"/>
+<output wsam:Action="http://ws/WebServiceFV/crearNuevoPedidoResponse" message="tns:crearNuevoPedidoResponse"/>
 </operation>
 <operation name="listarClientes">
 <input wsam:Action="http://ws/WebServiceFV/listarClientesRequest" message="tns:listarClientes"/>
@@ -457,37 +395,234 @@
 <input wsam:Action="http://ws/WebServiceFV/listarlogin1Request" message="tns:listarlogin1"/>
 <output wsam:Action="http://ws/WebServiceFV/listarlogin1Response" message="tns:listarlogin1Response"/>
 </operation>
-<operation name="listarProductos">
-<input wsam:Action="http://ws/WebServiceFV/listarProductosRequest" message="tns:listarProductos"/>
-<output wsam:Action="http://ws/WebServiceFV/listarProductosResponse" message="tns:listarProductosResponse"/>
+<operation name="modificarProductor">
+<input wsam:Action="http://ws/WebServiceFV/modificarProductorRequest" message="tns:modificarProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarProductorResponse" message="tns:modificarProductorResponse"/>
 </operation>
-<operation name="listarlogin2">
-<input wsam:Action="http://ws/WebServiceFV/listarlogin2Request" message="tns:listarlogin2"/>
-<output wsam:Action="http://ws/WebServiceFV/listarlogin2Response" message="tns:listarlogin2Response"/>
+<operation name="listarproductorporrut">
+<input wsam:Action="http://ws/WebServiceFV/listarproductorporrutRequest" message="tns:listarproductorporrut"/>
+<output wsam:Action="http://ws/WebServiceFV/listarproductorporrutResponse" message="tns:listarproductorporrutResponse"/>
 </operation>
-<operation name="agregarProductor">
-<input wsam:Action="http://ws/WebServiceFV/agregarProductorRequest" message="tns:agregarProductor"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarProductorResponse" message="tns:agregarProductorResponse"/>
+<operation name="agregarClienteNormal">
+<input wsam:Action="http://ws/WebServiceFV/agregarClienteNormalRequest" message="tns:agregarClienteNormal"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarClienteNormalResponse" message="tns:agregarClienteNormalResponse"/>
 </operation>
-<operation name="agregarConsultor">
-<input wsam:Action="http://ws/WebServiceFV/agregarConsultorRequest" message="tns:agregarConsultor"/>
-<output wsam:Action="http://ws/WebServiceFV/agregarConsultorResponse" message="tns:agregarConsultorResponse"/>
+<operation name="modificarTransportista">
+<input wsam:Action="http://ws/WebServiceFV/modificarTransportistaRequest" message="tns:modificarTransportista"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarTransportistaResponse" message="tns:modificarTransportistaResponse"/>
 </operation>
-<operation name="eliminarAdmin">
-<input wsam:Action="http://ws/WebServiceFV/eliminarAdminRequest" message="tns:eliminarAdmin"/>
-<output wsam:Action="http://ws/WebServiceFV/eliminarAdminResponse" message="tns:eliminarAdminResponse"/>
+<operation name="modificarClienteEmpresa">
+<input wsam:Action="http://ws/WebServiceFV/modificarClienteEmpresaRequest" message="tns:modificarClienteEmpresa"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarClienteEmpresaResponse" message="tns:modificarClienteEmpresaResponse"/>
 </operation>
-<operation name="crearNuevoPedido">
-<input wsam:Action="http://ws/WebServiceFV/crearNuevoPedidoRequest" message="tns:crearNuevoPedido"/>
-<output wsam:Action="http://ws/WebServiceFV/crearNuevoPedidoResponse" message="tns:crearNuevoPedidoResponse"/>
+<operation name="modificarAdministrador">
+<input wsam:Action="http://ws/WebServiceFV/modificarAdministradorRequest" message="tns:modificarAdministrador"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarAdministradorResponse" message="tns:modificarAdministradorResponse"/>
+</operation>
+<operation name="eliminarDefinitivoProductor">
+<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoProductorRequest" message="tns:eliminarDefinitivoProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoProductorResponse" message="tns:eliminarDefinitivoProductorResponse"/>
+</operation>
+<operation name="desactivarCuentaProductor">
+<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaProductorRequest" message="tns:desactivarCuentaProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaProductorResponse" message="tns:desactivarCuentaProductorResponse"/>
+</operation>
+<operation name="eliminarConsultor">
+<input wsam:Action="http://ws/WebServiceFV/eliminarConsultorRequest" message="tns:eliminarConsultor"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarConsultorResponse" message="tns:eliminarConsultorResponse"/>
+</operation>
+<operation name="modificarClientenormal">
+<input wsam:Action="http://ws/WebServiceFV/modificarClientenormalRequest" message="tns:modificarClientenormal"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarClientenormalResponse" message="tns:modificarClientenormalResponse"/>
+</operation>
+<operation name="eliminarDefinitivoClienteNormal">
+<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteNormalRequest" message="tns:eliminarDefinitivoClienteNormal"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteNormalResponse" message="tns:eliminarDefinitivoClienteNormalResponse"/>
+</operation>
+<operation name="listarClienteNormalxRut">
+<input wsam:Action="http://ws/WebServiceFV/listarClienteNormalxRutRequest" message="tns:listarClienteNormalxRut"/>
+<output wsam:Action="http://ws/WebServiceFV/listarClienteNormalxRutResponse" message="tns:listarClienteNormalxRutResponse"/>
+</operation>
+<operation name="desactivarCuentaClienteNormal">
+<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteNormalRequest" message="tns:desactivarCuentaClienteNormal"/>
+<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteNormalResponse" message="tns:desactivarCuentaClienteNormalResponse"/>
+</operation>
+<operation name="agregarClienteEmp">
+<input wsam:Action="http://ws/WebServiceFV/agregarClienteEmpRequest" message="tns:agregarClienteEmp"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarClienteEmpResponse" message="tns:agregarClienteEmpResponse"/>
+</operation>
+<operation name="eliminarDefinitivoClienteEmpresa">
+<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaRequest" message="tns:eliminarDefinitivoClienteEmpresa"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoClienteEmpresaResponse" message="tns:eliminarDefinitivoClienteEmpresaResponse"/>
+</operation>
+<operation name="agregarTransportista">
+<input wsam:Action="http://ws/WebServiceFV/agregarTransportistaRequest" message="tns:agregarTransportista"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarTransportistaResponse" message="tns:agregarTransportistaResponse"/>
+</operation>
+<operation name="listarTransportista">
+<input wsam:Action="http://ws/WebServiceFV/listarTransportistaRequest" message="tns:listarTransportista"/>
+<output wsam:Action="http://ws/WebServiceFV/listarTransportistaResponse" message="tns:listarTransportistaResponse"/>
+</operation>
+<operation name="agregarAdministrador">
+<input wsam:Action="http://ws/WebServiceFV/agregarAdministradorRequest" message="tns:agregarAdministrador"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarAdministradorResponse" message="tns:agregarAdministradorResponse"/>
+</operation>
+<operation name="listarAdminpornombre">
+<input wsam:Action="http://ws/WebServiceFV/listarAdminpornombreRequest" message="tns:listarAdminpornombre"/>
+<output wsam:Action="http://ws/WebServiceFV/listarAdminpornombreResponse" message="tns:listarAdminpornombreResponse"/>
+</operation>
+<operation name="desactivarCuentaClienteEmpresa">
+<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteEmpresaRequest" message="tns:desactivarCuentaClienteEmpresa"/>
+<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaClienteEmpresaResponse" message="tns:desactivarCuentaClienteEmpresaResponse"/>
+</operation>
+<operation name="modificarConsultor">
+<input wsam:Action="http://ws/WebServiceFV/modificarConsultorRequest" message="tns:modificarConsultor"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarConsultorResponse" message="tns:modificarConsultorResponse"/>
+</operation>
+<operation name="listarconsultorporpornombre">
+<input wsam:Action="http://ws/WebServiceFV/listarconsultorporpornombreRequest" message="tns:listarconsultorporpornombre"/>
+<output wsam:Action="http://ws/WebServiceFV/listarconsultorporpornombreResponse" message="tns:listarconsultorporpornombreResponse"/>
+</operation>
+<operation name="listarproductosporrutproductor">
+<input wsam:Action="http://ws/WebServiceFV/listarproductosporrutproductorRequest" message="tns:listarproductosporrutproductor"/>
+<output wsam:Action="http://ws/WebServiceFV/listarproductosporrutproductorResponse" message="tns:listarproductosporrutproductorResponse"/>
+</operation>
+<operation name="eliminarProductoDelProductor">
+<input wsam:Action="http://ws/WebServiceFV/eliminarProductoDelProductorRequest" message="tns:eliminarProductoDelProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarProductoDelProductorResponse" message="tns:eliminarProductoDelProductorResponse"/>
+</operation>
+<operation name="crearNuevoDetallePedidoo">
+<input wsam:Action="http://ws/WebServiceFV/crearNuevoDetallePedidooRequest" message="tns:crearNuevoDetallePedidoo"/>
+<output wsam:Action="http://ws/WebServiceFV/crearNuevoDetallePedidooResponse" message="tns:crearNuevoDetallePedidooResponse"/>
+</operation>
+<operation name="agregarNuevoProducto">
+<input wsam:Action="http://ws/WebServiceFV/agregarNuevoProductoRequest" message="tns:agregarNuevoProducto"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarNuevoProductoResponse" message="tns:agregarNuevoProductoResponse"/>
+</operation>
+<operation name="eliminarDefinitivoTransportista">
+<input wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoTransportistaRequest" message="tns:eliminarDefinitivoTransportista"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarDefinitivoTransportistaResponse" message="tns:eliminarDefinitivoTransportistaResponse"/>
+</operation>
+<operation name="agregarTransporte">
+<input wsam:Action="http://ws/WebServiceFV/agregarTransporteRequest" message="tns:agregarTransporte"/>
+<output wsam:Action="http://ws/WebServiceFV/agregarTransporteResponse" message="tns:agregarTransporteResponse"/>
+</operation>
+<operation name="eliminarTransportexPatente">
+<input wsam:Action="http://ws/WebServiceFV/eliminarTransportexPatenteRequest" message="tns:eliminarTransportexPatente"/>
+<output wsam:Action="http://ws/WebServiceFV/eliminarTransportexPatenteResponse" message="tns:eliminarTransportexPatenteResponse"/>
+</operation>
+<operation name="desactivarCuentaTransportista">
+<input wsam:Action="http://ws/WebServiceFV/desactivarCuentaTransportistaRequest" message="tns:desactivarCuentaTransportista"/>
+<output wsam:Action="http://ws/WebServiceFV/desactivarCuentaTransportistaResponse" message="tns:desactivarCuentaTransportistaResponse"/>
+</operation>
+<operation name="listartransportistaporrut">
+<input wsam:Action="http://ws/WebServiceFV/listartransportistaporrutRequest" message="tns:listartransportistaporrut"/>
+<output wsam:Action="http://ws/WebServiceFV/listartransportistaporrutResponse" message="tns:listartransportistaporrutResponse"/>
+</operation>
+<operation name="listarTransportexRut">
+<input wsam:Action="http://ws/WebServiceFV/listarTransportexRutRequest" message="tns:listarTransportexRut"/>
+<output wsam:Action="http://ws/WebServiceFV/listarTransportexRutResponse" message="tns:listarTransportexRutResponse"/>
+</operation>
+<operation name="modificarTransporte">
+<input wsam:Action="http://ws/WebServiceFV/modificarTransporteRequest" message="tns:modificarTransporte"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarTransporteResponse" message="tns:modificarTransporteResponse"/>
 </operation>
 <operation name="listarProductosxIdyNombre">
 <input wsam:Action="http://ws/WebServiceFV/listarProductosxIdyNombreRequest" message="tns:listarProductosxIdyNombre"/>
 <output wsam:Action="http://ws/WebServiceFV/listarProductosxIdyNombreResponse" message="tns:listarProductosxIdyNombreResponse"/>
 </operation>
+<operation name="crearNuevaOfertaEnSubasta">
+<input wsam:Action="http://ws/WebServiceFV/crearNuevaOfertaEnSubastaRequest" message="tns:crearNuevaOfertaEnSubasta"/>
+<output wsam:Action="http://ws/WebServiceFV/crearNuevaOfertaEnSubastaResponse" message="tns:crearNuevaOfertaEnSubastaResponse"/>
+</operation>
+<operation name="listarRegionesPorIDPais">
+<input wsam:Action="http://ws/WebServiceFV/listarRegionesPorIDPaisRequest" message="tns:listarRegionesPorIDPais"/>
+<output wsam:Action="http://ws/WebServiceFV/listarRegionesPorIDPaisResponse" message="tns:listarRegionesPorIDPaisResponse"/>
+</operation>
+<operation name="listarContratosCliEx">
+<input wsam:Action="http://ws/WebServiceFV/listarContratosCliExRequest" message="tns:listarContratosCliEx"/>
+<output wsam:Action="http://ws/WebServiceFV/listarContratosCliExResponse" message="tns:listarContratosCliExResponse"/>
+</operation>
+<operation name="listarContratosTransporte">
+<input wsam:Action="http://ws/WebServiceFV/listarContratosTransporteRequest" message="tns:listarContratosTransporte"/>
+<output wsam:Action="http://ws/WebServiceFV/listarContratosTransporteResponse" message="tns:listarContratosTransporteResponse"/>
+</operation>
+<operation name="listarPais">
+<input wsam:Action="http://ws/WebServiceFV/listarPaisRequest" message="tns:listarPais"/>
+<output wsam:Action="http://ws/WebServiceFV/listarPaisResponse" message="tns:listarPaisResponse"/>
+</operation>
+<operation name="listarComuna">
+<input wsam:Action="http://ws/WebServiceFV/listarComunaRequest" message="tns:listarComuna"/>
+<output wsam:Action="http://ws/WebServiceFV/listarComunaResponse" message="tns:listarComunaResponse"/>
+</operation>
+<operation name="listarSubastas">
+<input wsam:Action="http://ws/WebServiceFV/listarSubastasRequest" message="tns:listarSubastas"/>
+<output wsam:Action="http://ws/WebServiceFV/listarSubastasResponse" message="tns:listarSubastasResponse"/>
+</operation>
+<operation name="listarMarcas">
+<input wsam:Action="http://ws/WebServiceFV/listarMarcasRequest" message="tns:listarMarcas"/>
+<output wsam:Action="http://ws/WebServiceFV/listarMarcasResponse" message="tns:listarMarcasResponse"/>
+</operation>
+<operation name="listarModelos">
+<input wsam:Action="http://ws/WebServiceFV/listarModelosRequest" message="tns:listarModelos"/>
+<output wsam:Action="http://ws/WebServiceFV/listarModelosResponse" message="tns:listarModelosResponse"/>
+</operation>
+<operation name="modificarProductosporRutProductor">
+<input wsam:Action="http://ws/WebServiceFV/modificarProductosporRutProductorRequest" message="tns:modificarProductosporRutProductor"/>
+<output wsam:Action="http://ws/WebServiceFV/modificarProductosporRutProductorResponse" message="tns:modificarProductosporRutProductorResponse"/>
+</operation>
+<operation name="listarClienteEmpresaxidentificador">
+<input wsam:Action="http://ws/WebServiceFV/listarClienteEmpresaxidentificadorRequest" message="tns:listarClienteEmpresaxidentificador"/>
+<output wsam:Action="http://ws/WebServiceFV/listarClienteEmpresaxidentificadorResponse" message="tns:listarClienteEmpresaxidentificadorResponse"/>
+</operation>
 </portType>
 <binding name="WebServiceFVPortBinding" type="tns:WebServiceFV">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="listarlogin2">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarAdmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarProductos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarProductor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarConsultor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="listarCalibre">
 <soap:operation soapAction=""/>
 <input>
@@ -497,313 +632,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listarClienteEmpresaxidentificador">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarProductosporRutProductor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarAdministrador">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarConsultor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarAdminpornombre">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="desactivarCuentaProductor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarDefinitivoTransportista">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="desactivarCuentaTransportista">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarClienteNormalxRut">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregarClienteNormal">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarTransportista">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="desactivarCuentaClienteEmpresa">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregarTransportista">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="desactivarCuentaClienteNormal">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarproductosporrutproductor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarDefinitivoProductor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregarAdministrador">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarproductorporrut">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarClienteEmpresa">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarConsultor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregarClienteEmp">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarDefinitivoClienteEmpresa">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listartransportistaporrut">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregarNuevoProducto">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarProductoDelProductor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarProductor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarClientenormal">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarTransportista">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="agregarTransporte">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarTransportexRut">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarDefinitivoClienteNormal">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="crearNuevoDetallePedidoo">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminarTransportexPatente">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listarconsultorporpornombre">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="modificarTransporte">
+<operation name="listarProductor">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -821,7 +650,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listarProductor">
+<operation name="crearNuevoPedido">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -857,7 +686,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listarProductos">
+<operation name="modificarProductor">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -866,7 +695,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listarlogin2">
+<operation name="listarproductorporrut">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -875,7 +704,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="agregarProductor">
+<operation name="agregarClienteNormal">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -884,7 +713,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="agregarConsultor">
+<operation name="modificarTransportista">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -893,7 +722,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="eliminarAdmin">
+<operation name="modificarClienteEmpresa">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -902,7 +731,250 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="crearNuevoPedido">
+<operation name="modificarAdministrador">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarDefinitivoProductor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="desactivarCuentaProductor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarConsultor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="modificarClientenormal">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarDefinitivoClienteNormal">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarClienteNormalxRut">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="desactivarCuentaClienteNormal">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarClienteEmp">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarDefinitivoClienteEmpresa">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarTransportista">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarTransportista">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarAdministrador">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarAdminpornombre">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="desactivarCuentaClienteEmpresa">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="modificarConsultor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarconsultorporpornombre">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarproductosporrutproductor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarProductoDelProductor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="crearNuevoDetallePedidoo">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarNuevoProducto">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarDefinitivoTransportista">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="agregarTransporte">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminarTransportexPatente">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="desactivarCuentaTransportista">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listartransportistaporrut">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarTransportexRut">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="modificarTransporte">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -912,6 +984,105 @@
 </output>
 </operation>
 <operation name="listarProductosxIdyNombre">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="crearNuevaOfertaEnSubasta">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarRegionesPorIDPais">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarContratosCliEx">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarContratosTransporte">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarPais">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarComuna">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarSubastas">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarMarcas">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarModelos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="modificarProductosporRutProductor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarClienteEmpresaxidentificador">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
